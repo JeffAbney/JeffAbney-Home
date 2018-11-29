@@ -1,11 +1,11 @@
 import React from 'react';
 
 export default () => (
-  <div className="hero">
+  <div className="hero" id="home">
     <h1>&lt; Developer &gt;</h1>
-    <p>Ipsum Lorem blah ddi blah blooo gooosaff kcmkmw clkemclm clmclm flewjnc
-        lkewfl kmlkvsmvkmvw mmekf vmev fkemf mkewmfkm .ewf fef ge;ewf mf 
-        efkmwmf mwef m;lfemmwef mkmewfmlw mfemlkewm ;k.
+    <p>Jeff Abney solves problems and creates solutions 
+      that help people and companies reach their goals. Jeff specializes
+      in developing Single Page Apps with HTML5, CSS, and Javascript with React.
     </p>
     <div className="hero-btn-container">
       <button className="button hero-button">Need a site?</button>
