@@ -1,14 +1,16 @@
 import React from 'react';
+import Slider from './slider.js';
 import clockImg from '/home/jeff/git_workspace/JeffAbney/dist/images/pomodoro.png';
 import drumMachineImg from '/home/jeff/git_workspace/JeffAbney/dist/images/pomodoro.png';
 import randomQuoteImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/quote.png';
+
 
 const proArr = [
   {
     id: 1,
     title: 'Pomodoro Clock',
     text: 'React - CSS - Animation',
-    image: clockImg,
+    image: clockImg
   },
   {
     id: 2,
@@ -24,13 +26,16 @@ const proArr = [
   }
 ];
 
+
 const projects = () => {
+
   const projectList = proArr.map((pro) =>
     <div
       className={`project ${pro.id % 2 === 0 ? 'right' : 'left'}`}
       key={pro.id}
     >
       <div className={`project-grid ${pro.id % 2 === 0 ? 'right' : 'left'}`}>
+        {Slider(pro)}
         <div className={`text-container`}>
           <h2>{pro.title}</h2>
           <p>{pro.text}</p>

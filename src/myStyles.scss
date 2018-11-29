@@ -106,10 +106,8 @@ body {
 
     .project-grid {
       display: grid;
-      
       position: relative;
   
-
       .text-container {
         grid-area: t;
         display: flex;
@@ -202,3 +200,25 @@ body {
     }
   }
 }
+
+
+/* ------------------- Slider Style -------------- */
+
+.slider-grid {
+  display: flex;
+  position: absolute;
+  align-self: flex-end;
+  height: 85.714%;
+  width: 80%;
+}
+
+.slider-grid.right {
+  right: 0;
+}
+
+.slider-bar {
+  flex: 1;
+  background: #030000;
+}
+
+/* ------------------- Slider Animation ------------- */

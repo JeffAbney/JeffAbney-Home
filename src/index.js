@@ -25,7 +25,9 @@ class App extends React.Component {
     import(/* webpackChunkName: 'Footer' */ './components/footer.js').then(Footer => {
       this.setState({ Footer: Footer.default})
     });
+
   }
+  
 
   render() {
     const { Navbar, Hero, Projects, Footer } = this.state;

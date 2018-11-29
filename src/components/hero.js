@@ -3,8 +3,8 @@ import React from 'react';
 export default () => (
   <div className="hero" id="home">
     <h1>&lt; Developer &gt;</h1>
-    <p>Jeff Abney solves problems and creates solutions 
-      that help people and companies reach their goals. Jeff specializes
+    <p>I solve problems and create solutions 
+      that help people and companies reach their goals. I specialize
       in developing Single Page Apps with HTML5, CSS, and Javascript with React.
     </p>
     <div className="hero-btn-container">
