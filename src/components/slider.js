@@ -71,10 +71,14 @@ const sliderFunctions =
 
 /* -------------- Slider triggers animation when in viewport - */
 
-  var sliderElement;
+  var sliderElement1;
+  var sliderElement2;
+  var sliderElement3;
 
   window.addEventListener("load", function(event) {
-    sliderElement = document.querySelector(".slider-box");
+    sliderElement1 = document.querySelector(".slider-1");
+    sliderElement2 = document.querySelector(".slider-2");
+    sliderElement3 = document.querySelector(".slider-3");
   
     createObserver();
   }, false);
@@ -85,16 +89,23 @@ const sliderFunctions =
     var options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.3
+        threshold:  [0, 0.25, 0.5, 0.75, 1]
       };
   
     observer = new IntersectionObserver(handleIntersect, options);
-    observer.observe(sliderElement);
+    observer.observe(sliderElement1);
+    observer.observe(sliderElement2);
+    observer.observe(sliderElement3);
   }
 
   function handleIntersect(entries, observer) {
     entries.forEach(function(entry) {
-      entry.target.style.backgroundColor = "green";
+      if (entry.intersectionRatio > 0.3) {
+        entry.target.style.backgroundColor = "transparent";
+      }
+      else {
+        entry.target.style.backgroundColor = "black";
+      }
     })
   }
 
