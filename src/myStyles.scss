@@ -222,21 +222,76 @@ body {
 
 .slider-bar {
   flex: 1;
-  background: #030000;
-  animation-name: slider;
-  width: 0%;
+  background: #fff;
 
+}
+
+.horizontal-slider {
+  animation-name: horizontal-slider;
+  width: 0%;
+}
+
+.vertical-slider {
+  animation-name: vertical-slider;
+  height: 0%;
 }
 
 
 /* ------------------- Slider Animation ------------- */
 
-@keyframes slider {
-  from {width: 100%}
-  to {width: 0%; }
+@keyframes horizontal-slider {
+  from {width: 100%;}
+  to {width: 0%;}
 }
 
-@for $i from 1 through 11 {
-  $time: 2 / #{$i};
-  .slider-bar.bar-#{$i} { animation-duration: #{$time}s; }
+@keyframes vertical-slider {
+  from {height: 100%;}
+  to {height:0%;}
+}
+
+
+.slider-1 {
+  @for $i from 1 through 5 {
+    $time: 2 / #{$i};
+      .bar-#{$i} { animation-duration: #{$time}s; }
+  }
+}
+
+.slider-2 {
+  flex-direction: row;
+  @for $i from 1 through 7 {
+    @if $i == 1 or $i == 7 {
+      .bar-#{$i} { animation-duration: 1.3s; }
+    }
+    @else if $i == 2 or $i == 6 {
+      .bar-#{$i} { animation-duration: 1.1s; }
+    }
+    @else if $i == 3 or $i == 5 {
+      .bar-#{$i} { animation-duration: 0.9s; }
+    }
+    @else {
+      .bar-#{$i} {animation-duration: 0.7s}
+    }
+  }
+}
+
+.slider-3 {
+  flex-direction: row;
+  
+  .bar-1 {
+    animation-duration: .9s;
+    animation-delay: .1s
+  }
+  .bar-2 {
+    animation-duration: .6s;
+    animation-delay: .4s
+  }
+  .bar-3 {
+    animation-duration: .2s;
+    animation-delay: .8s
+  }
+  .bar-4 {
+    animation-duration: .7s;
+    animation-delay: .3s
+  }
 }
