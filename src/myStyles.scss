@@ -3,9 +3,10 @@ $color-grey: #343434;
 $color-yellow: #F5CD23;
 
 body {
-  background-color: black;
-  color: white;
+  background-color: $color-black;
+  color: #fff;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .app {
@@ -150,6 +151,7 @@ body {
 
     img {
       grid-area: i;
+      min-width: 350px;
     }
   }
 
@@ -204,21 +206,37 @@ body {
 
 /* ------------------- Slider Style -------------- */
 
-.slider-grid {
+.slider-box {
   display: flex;
+  flex-direction: column;
   position: absolute;
   align-self: flex-end;
   height: 85.714%;
   width: 80%;
+  min-width: 552px;
 }
 
-.slider-grid.right {
+.slider-box.right {
   right: 0;
 }
 
 .slider-bar {
   flex: 1;
   background: #030000;
+  animation-name: slider;
+  width: 0%;
+
 }
 
+
 /* ------------------- Slider Animation ------------- */
+
+@keyframes slider {
+  from {width: 100%}
+  to {width: 0%; }
+}
+
+@for $i from 1 through 11 {
+  $time: 2 / #{$i};
+  .slider-bar.bar-#{$i} { animation-duration: #{$time}s; }
+}
