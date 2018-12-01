@@ -237,6 +237,16 @@ body {
   height: 0%;
 }
 
+.horizontal-slider-close {
+  animation-name: horizontal-slider-close;
+  width: 0%;
+}
+
+.vertical-slider-close {
+  animation-name: vertical-slider-close;
+  height: 0%;
+}
+
 
 /* ------------------- Slider Animation ------------- */
 
