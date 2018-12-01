@@ -227,27 +227,37 @@ body {
 
 }
 
-.horizontal-slider {
-  animation-name: horizontal-slider;
+.horizontal-slider-open {
+  animation-name: horizontal-slider-open;
   width: 0%;
 }
 
-.vertical-slider {
-  animation-name: vertical-slider;
+.vertical-slider-open {
+  animation-name: vertical-slider-open;
   height: 0%;
 }
 
 
 /* ------------------- Slider Animation ------------- */
 
-@keyframes horizontal-slider {
+@keyframes horizontal-slider-open {
   from {width: 100%;}
   to {width: 0%;}
 }
 
-@keyframes vertical-slider {
+@keyframes vertical-slider-open {
   from {height: 100%;}
   to {height:0%;}
+}
+
+@keyframes horizontal-slider-close {
+  from {width: 0%;}
+  to {width: 100%;}
+}
+
+@keyframes vertical-slider-close {
+  from {height: 0%;}
+  to {height: 100%;}
 }
 
 
