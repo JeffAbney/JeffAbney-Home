@@ -102,8 +102,20 @@ const sliderFunctions =
     entries.forEach(function(entry) {
       if (entry.intersectionRatio > 0.3) {
         entry.target.style.backgroundColor = "transparent";
-      }
-      else {
+        const elChildren = entry.target.children;
+        console.log(elChildren); 
+        const numberOfChildren = elChildren.length;
+
+        for (let i = 0; i < numberOfChildren; i++) {
+          var name, arr;
+          name = "play";
+          arr = elChildren[i].className.split(" ");
+          if (arr.indexOf(name) == -1) {
+              elChildren[i].className += " " + name;
+          } 
+        }
+        
+      } else {
         entry.target.style.backgroundColor = "white";
       }
     })

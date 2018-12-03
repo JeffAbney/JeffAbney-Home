@@ -230,21 +230,29 @@ body {
 .horizontal-slider-open {
   animation-name: horizontal-slider-open;
   width: 0%;
+  animation-play-state: paused;
 }
 
 .vertical-slider-open {
   animation-name: vertical-slider-open;
   height: 0%;
+  animation-play-state: paused;
 }
 
 .horizontal-slider-close {
   animation-name: horizontal-slider-close;
   width: 0%;
+  animation-play-state: paused;
 }
 
 .vertical-slider-close {
   animation-name: vertical-slider-close;
   height: 0%;
+  animation-play-state: paused;
+}
+
+.play {
+  animation-play-state: running;
 }
 
 
@@ -308,8 +316,8 @@ body {
     animation-delay: .4s
   }
   .bar-3 {
-    animation-duration: .2s;
-    animation-delay: .8s
+    animation-duration: .5s;
+    animation-delay: .5s
   }
   .bar-4 {
     animation-duration: .7s;
