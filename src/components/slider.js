@@ -58,12 +58,12 @@ const sliderFunctions =
     5: (el) => {
         return (
           <div className={`slider-box slider-5 ${el.id % 2 === 0 ? 'right' : 'left'}`}>
-            <div className="slider-bar bar-1 horizontal-slider-open"></div>
-            <div className="slider-bar bar-2 horizontal-slider-open"></div>
-            <div className="slider-bar bar-3 horizontal-slider-open"></div>
-            <div className="slider-bar bar-4 horizontal-slider-open"></div>
-            <div className="slider-bar bar-5 horizontal-slider-open"></div>
-            <div className="slider-bar bar-6 horizontal-slider-open"></div>
+            <div className="slider-bar bar-1 vertical-slider-open"></div>
+            <div className="slider-bar bar-2 vertical-slider-open"></div>
+            <div className="slider-bar bar-3 vertical-slider-open"></div>
+            <div className="slider-bar bar-4 vertical-slider-open"></div>
+            <div className="slider-bar bar-5 vertical-slider-open"></div>
+            <div className="slider-bar bar-6 vertical-slider-open"></div>
           </div>
           )
       },
@@ -93,7 +93,7 @@ const sliderFunctions =
     var options = {
         root: null,
         rootMargin: '0px',
-        threshold:  [0, 0.25, 0.5, 0.75, 1]
+        threshold:  [0, 0.2, 0.4, 0.6, 0.8, 1]
       };
   
     observer = new IntersectionObserver(handleIntersect, options);
@@ -106,7 +106,7 @@ const sliderFunctions =
 
   function handleIntersect(entries, observer) {
     entries.forEach(function(entry) {
-      if (entry.intersectionRatio > 0.5) {
+      if (entry.intersectionRatio > 0.4) {
         entry.target.style.backgroundColor = "transparent";
         const elChildren = entry.target.children;
         const numberOfChildren = elChildren.length;
