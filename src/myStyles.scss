@@ -241,13 +241,13 @@ body {
 
 .horizontal-slider-close {
   animation-name: horizontal-slider-close;
-  width: 0%;
+  width: 100%;
   animation-play-state: paused;
 }
 
 .vertical-slider-close {
   animation-name: vertical-slider-close;
-  height: 0%;
+  height: 100%;
   animation-play-state: paused;
 }
 

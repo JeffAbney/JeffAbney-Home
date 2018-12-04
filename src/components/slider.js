@@ -104,19 +104,27 @@ const sliderFunctions =
         entry.target.style.backgroundColor = "transparent";
         const elChildren = entry.target.children;
         const numberOfChildren = elChildren.length;
-        console.log(entry.target);
 
         for (let i = 0; i < numberOfChildren; i++) {
           var name, arr;
           name = "play";
           arr = elChildren[i].className.split(" ");
+          regEx = /close$/g;
+          isMatch = (className) => regEx.test(className);
+          arr.map((className) => {if (isMatch(className)) {
+            const oldClassList = elChildren[i].className;
+            const changeClassName = (className) => className.replace('close', 'open');
+            const newClassName = changeClassName(className);
+             elChildren[i].className = oldClassList.replace(className, newClassName);
+            }
+          })
           if (arr.indexOf(name) == -1) {
               elChildren[i].className += " " + name;
           } 
         }
         
       } else {
-        entry.target.style.backgroundColor = "white";
+        
         const elChildren = entry.target.children;
         const numberOfChildren = elChildren.length;
 
@@ -129,11 +137,9 @@ const sliderFunctions =
           
           if (arr.indexOf(name) > -1) {
               arr.map((className) => {if (isMatch(className)) {
+                const oldClassList = elChildren[i].className;
                 const changeClassName = (className) => className.replace('open', 'close');
                 const newClassName = changeClassName(className);
-                const oldClassList = elChildren[i].className;
-                 console.log(typeof elChildren[i].className);
-                 console.log(elChildren[i].className);
                  elChildren[i].className = oldClassList.replace(className, newClassName);
                 }
               })
