@@ -26,7 +26,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: $color-grey;
+  background-color: $color-grey;
 	width: 100%;
   height: 100px;
   z-index: 1000;
@@ -293,13 +293,13 @@ body {
       .bar-#{$i} { animation-duration: 1.3s; }
     }
     @else if $i == 2 or $i == 6 {
-      .bar-#{$i} { animation-duration: 1.1s; }
+      .bar-#{$i} { animation-duration: 1.15s; }
     }
     @else if $i == 3 or $i == 5 {
       .bar-#{$i} { animation-duration: 0.9s; }
     }
     @else {
-      .bar-#{$i} {animation-duration: 0.7s}
+      .bar-#{$i} {animation-duration: 0.65s}
     }
   }
 }
@@ -309,18 +309,86 @@ body {
   
   .bar-1 {
     animation-duration: .9s;
-    animation-delay: .1s
+    animation-timing-function: linear;
   }
   .bar-2 {
     animation-duration: .6s;
-    animation-delay: .4s
+    animation-timing-function: linear;
   }
   .bar-3 {
     animation-duration: .5s;
-    animation-delay: .5s
+    animation-timing-function: linear;
   }
   .bar-4 {
     animation-duration: .7s;
-    animation-delay: .3s
+    animation-timing-function: linear;
+  }
+}
+
+.slider-4 {
+  .bar-1 {
+    animation-duration: .9s;
+    animation-timing-function: linear;
+  }
+  .bar-2 {
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+  .bar-3 {
+    animation-duration: 1s;
+    animation-timing-function: ease;
+  }
+  .bar-4 {
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+  }
+  .bar-5 {
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+  .bar-6 {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .bar-7 {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .bar-8 {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .bar-9 {
+    animation-duration: 1s;     
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .bar-10 {
+    animation-duration: 1s;     
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+  }
+  .bar-11 {
+    animation-duration: 1s;     
+    animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
+  }
+}
+
+.slider-5 {
+  .bar-1 {
+    animation-duration: 1.2s;
+  }
+  .bar-2 {
+    animation-duration: 1s;
+  }
+  .bar-3 {
+    animation-duration: .8s;
+  }
+  .bar-4 {
+    animation-duration: 1.1s;
+  }
+  .bar-5 {
+    animation-duration: .9s;
+  }
+  .bar-6 {
+    animation-duration: 1s;
   }
 }

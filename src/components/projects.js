@@ -23,6 +23,18 @@ const proArr = [
     title: 'Random Quote Machine',
     text: 'React - API Connected - CSS',
     image: randomQuoteImg
+  },
+  {
+    id: 4,
+    title: 'Calculator',
+    text: 'Javascript - React - CSS',
+    image: randomQuoteImg
+  },
+  {
+    id: 5,
+    title: 'Random Quote Machine',
+    text: 'React - API Connected - CSS',
+    image: randomQuoteImg
   }
 ];
 

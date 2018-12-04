@@ -74,11 +74,15 @@ const sliderFunctions =
   var sliderElement1;
   var sliderElement2;
   var sliderElement3;
+  var sliderElement4;
+  var sliderElement5;
 
   window.addEventListener("load", function(event) {
     sliderElement1 = document.querySelector(".slider-1");
     sliderElement2 = document.querySelector(".slider-2");
     sliderElement3 = document.querySelector(".slider-3");
+    sliderElement4 = document.querySelector(".slider-4");
+    sliderElement5 = document.querySelector(".slider-5");
   
     createObserver();
   }, false);
@@ -96,11 +100,13 @@ const sliderFunctions =
     observer.observe(sliderElement1);
     observer.observe(sliderElement2);
     observer.observe(sliderElement3);
+    observer.observe(sliderElement4);
+    observer.observe(sliderElement5);
   }
 
   function handleIntersect(entries, observer) {
     entries.forEach(function(entry) {
-      if (entry.intersectionRatio > 0.3) {
+      if (entry.intersectionRatio > 0.5) {
         entry.target.style.backgroundColor = "transparent";
         const elChildren = entry.target.children;
         const numberOfChildren = elChildren.length;
