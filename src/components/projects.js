@@ -49,26 +49,16 @@ const projects = () => {
     >
       <div className={`project-grid ${pro.id % 2 === 0 ? 'right' : 'left'}`}>
         {Slider(pro)}
-        <div onClick={showProject} className={`text-container`}>
+        <div className={`text-container`}>
           <h2>{pro.title}</h2>
           <p>{pro.text}</p>
         </div>
-        <img
-          src={pro.image}
-        />
+        <img src={pro.image} />
         </div>
     </div>
   );
   return projectList;
 }
-
-const showProject = () => {
-  //animation where project image slides out of viewport
-  //render full project
-  //animation where full project slides into viewport
-  console.log("It's working!");
-}
-  
 
 export default () => (
 
