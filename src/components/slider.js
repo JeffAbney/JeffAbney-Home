@@ -1,10 +1,20 @@
 import React from 'react';
 
+const showProject = () => {
+  //animation where project image slides out of viewport
+  //render full project
+  //animation where full project slides into viewport
+  console.log("It's working!");
+}
+
 const sliderFunctions = 
   {
     1: (el) => {
       return (
-<div className={`slider-box slider-1 ${el.id % 2 === 0 ? 'right' : 'left'}`}>
+        <div
+          className={`slider-box slider-1 ${el.id % 2 === 0 ? 'right' : 'left'}`}
+          onClick={showProject}
+        >
           <div className="slider-bar bar-1 horizontal-slider-open"></div>
           <div className="slider-bar bar-2 horizontal-slider-open"></div>
           <div className="slider-bar bar-3 horizontal-slider-open"></div>
@@ -15,7 +25,7 @@ const sliderFunctions =
     },
     2: (el) => {
         return (
-<div className={`slider-box slider-2 ${el.id % 2 === 0 ? 'right' : 'left'}`}>
+          <div className={`slider-box slider-2 ${el.id % 2 === 0 ? 'right' : 'left'}`}>
             <div className="slider-bar bar-1 vertical-slider-open"></div>
             <div className="slider-bar bar-2 vertical-slider-open"></div>
             <div className="slider-bar bar-3 vertical-slider-open"></div>
@@ -28,7 +38,7 @@ const sliderFunctions =
       },
     3: (el) => {
         return (
-<div className={`slider-box slider-3 ${el.id % 2 === 0 ? 'right' : 'left'}`}>
+          <div className={`slider-box slider-3 ${el.id % 2 === 0 ? 'right' : 'left'}`}>
             <div className="slider-bar bar-1 vertical-slider-open"></div>
             <div className="slider-bar bar-2 vertical-slider-open"></div>
             <div className="slider-bar bar-3 vertical-slider-open"></div>
@@ -39,7 +49,7 @@ const sliderFunctions =
 
     4: (el) => {
         return (
-<div className={`slider-box slider-4 ${el.id % 2 === 0 ? 'right' : 'left'}`}>
+          <div className={`slider-box slider-4 ${el.id % 2 === 0 ? 'right' : 'left'}`}>
             <div className="slider-bar bar-1 horizontal-slider-open"></div>
             <div className="slider-bar bar-2 horizontal-slider-open"></div>
             <div className="slider-bar bar-3 horizontal-slider-open"></div>

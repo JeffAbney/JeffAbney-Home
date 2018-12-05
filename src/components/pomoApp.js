@@ -165,7 +165,10 @@ const TimeRemainingDisplay = (props) => {
       <p className="time-remaining" id="time-left">
         {minutes}:{seconds}
       </p>
-      <audio className="beep" id="beep" src="../src/sounds/beep.wav"/>
+      <audio 
+        className="beep" 
+        id="beep" 
+        src="/home/jeff/git_workspace/JeffAbney/dist/sounds/beep.wav"/>
     </div>
   );
 }
