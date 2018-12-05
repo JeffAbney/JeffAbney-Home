@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
+import Pomodoro from '/home/jeff/git_workspace/JeffAbney/src/components/pomoApp.js';
 import './myStyles.scss';
+
+
 
 class App extends React.Component {
 
@@ -37,6 +39,7 @@ class App extends React.Component {
       {Navbar ? <Navbar/> : <p>Loading...</p>}
       {Hero ? <Hero/> : <p>Loading...</p>}
       {Projects ? <Projects/> : <p>Loading...</p>}
+      <Pomodoro />
       {Footer ? <Footer/> : <p>Loading...</p>}
       </div>
     );
