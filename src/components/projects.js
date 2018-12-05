@@ -45,6 +45,7 @@ const projects = () => {
   const projectList = proArr.map((pro) =>
     <div
       className={`project ${pro.id % 2 === 0 ? 'right' : 'left'}`}
+      id={`project-${pro.id}`}
       key={pro.id}
     >
       <div className={`project-grid ${pro.id % 2 === 0 ? 'right' : 'left'}`}>
