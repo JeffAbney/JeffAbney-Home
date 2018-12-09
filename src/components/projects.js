@@ -12,7 +12,8 @@ const proArr = [
     title: 'Pomodoro Clock',
     text: 'React - CSS - Animation',
     image: clockImg,
-    app: <Pomodoro/>
+    app: <Pomodoro/>,
+    appId: "Pomodoro-app"
   },
   {
     id: 2,
@@ -40,8 +41,13 @@ const proArr = [
   }
 ];
 
-const exitApp = () => {
-  console.log('Exit now');
+const exitApp = (pro) => {
+ document.getElementById(pro.appId).style.display="none";
+ document.getElementById(`project-grid-${pro.id}`).style.display="grid";
+ document.getElementById(`project-${pro.id}`).style.background="initial";
+ document.getElementById(`project-${pro.id}`).style.justifyContent="initial";
+ 
+
 }
 
 const projects = () => {
@@ -54,12 +60,14 @@ const projects = () => {
     >
       <p 
         className="button exit-button"
-        onClick={exitApp} 
+        onClick={() => exitApp(pro)} 
       >
       X
       </p>
     {pro.app ? pro.app: ""}
-      <div className={`project-grid ${pro.id % 2 === 0 ? 'right' : 'left'}`}>
+      <div 
+        className={`project-grid ${pro.id % 2 === 0 ? 'right' : 'left'}`}
+        id={`project-grid-${pro.id}`}>
         {Slider(pro)}
         <div className={`text-container`}>
           <h2>{pro.title}</h2>

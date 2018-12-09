@@ -17,9 +17,7 @@ const showProject = (event) => {
       , 1500)
     } 
 
-  //render full project
   //animation where full project slides into viewport
-  console.log("It's working!");
 }
 
 const sliderFunctions = 
