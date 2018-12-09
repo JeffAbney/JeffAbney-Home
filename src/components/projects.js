@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from './slider.js';
-
+import Pomodoro from '/home/jeff/git_workspace/JeffAbney/src/components/pomoApp.js';
 import clockImg from '/home/jeff/git_workspace/JeffAbney/dist/images/pomodoro.png';
 import drumMachineImg from '/home/jeff/git_workspace/JeffAbney/dist/images/pomodoro.png';
 import randomQuoteImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/quote.png';
@@ -11,7 +11,8 @@ const proArr = [
     id: 1,
     title: 'Pomodoro Clock',
     text: 'React - CSS - Animation',
-    image: clockImg
+    image: clockImg,
+    app: <Pomodoro/>
   },
   {
     id: 2,
@@ -39,15 +40,25 @@ const proArr = [
   }
 ];
 
+const exitApp = () => {
+  console.log('Exit now');
+}
 
 const projects = () => {
 
-  const projectList = proArr.map((pro) =>
+  const projectList = proArr.map((pro) => 
     <div
       className={`project ${pro.id % 2 === 0 ? 'right' : 'left'}`}
       id={`project-${pro.id}`}
       key={pro.id}
     >
+      <p 
+        className="button exit-button"
+        onClick={exitApp} 
+      >
+      X
+      </p>
+    {pro.app ? pro.app: ""}
       <div className={`project-grid ${pro.id % 2 === 0 ? 'right' : 'left'}`}>
         {Slider(pro)}
         <div className={`text-container`}>

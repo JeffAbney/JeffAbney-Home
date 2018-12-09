@@ -1,5 +1,5 @@
 import React from 'react';
-import Pomodoro from '/home/jeff/git_workspace/JeffAbney/src/components/pomoApp.js';
+
 
 const showProject = (event) => {
   const eTarget = event.target;
@@ -9,8 +9,12 @@ const showProject = (event) => {
     if (arr.indexOf(name) == -1) {
       element.className += " " + name;
       setTimeout( function() {
-        eTarget.parentElement.parentElement.style.display= 'none';}
-      , 1000)
+        eTarget.parentElement.style.display= 'none';
+        eTarget.parentElement.parentElement.style.backgroundColor= '#1A1A1A';
+        eTarget.parentElement.parentElement.style.justifyContent= 'center';
+        eTarget.parentElement.previousSibling.style.display='flex';
+      }
+      , 1500)
     } 
 
   //render full project

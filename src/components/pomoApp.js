@@ -431,7 +431,7 @@ class Pomodoro extends Component {
     const { minutes, seconds } = this.state;
 
     return (
-      <div className="Pomodoro">
+      <div className="mini-app Pomodoro" id="Pomodoro-app">
         <Header />
         <Dial
           state={state} 
