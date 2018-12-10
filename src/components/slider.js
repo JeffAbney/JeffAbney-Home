@@ -4,6 +4,7 @@ import React from 'react';
 const showProject = (event) => {
   const eTarget = event.target;
   const element = event.target.children[0];
+  const oldClasses = element.className;
   const  name = "disappear";
   const  arr = element.className.split(" ");
     if (arr.indexOf(name) == -1) {
@@ -13,6 +14,7 @@ const showProject = (event) => {
         eTarget.parentElement.parentElement.style.backgroundColor= '#1A1A1A';
         eTarget.parentElement.parentElement.style.justifyContent= 'center';
         eTarget.parentElement.previousSibling.style.display='flex';
+        element.className = oldClasses;
       }
       , 1500)
     } 
