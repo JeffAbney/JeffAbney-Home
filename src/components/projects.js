@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from './slider.js';
 import Pomodoro from '/home/jeff/git_workspace/JeffAbney/src/components/pomoApp.js';
 import clockImg from '/home/jeff/git_workspace/JeffAbney/dist/images/pomodoro.png';
-import drumMachineImg from '/home/jeff/git_workspace/JeffAbney/dist/images/pomodoro.png';
+import drumMachineImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/DRUMS-IMG.jpg';
 import randomQuoteImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/quote.png';
 
 
@@ -42,11 +42,10 @@ const proArr = [
 ];
 
 const exitApp = (pro) => {
- document.getElementById(pro.appId).style.display="none";
- document.getElementById(`project-grid-${pro.id}`).style.display="grid";
+  document.getElementById(pro.appId).style.display="none";
+  document.getElementById(`project-grid-${pro.id}`).style.display="grid";
  document.getElementById(`project-${pro.id}`).style.background="initial";
  document.getElementById(`project-${pro.id}`).style.justifyContent="initial";
- 
 
 }
 
