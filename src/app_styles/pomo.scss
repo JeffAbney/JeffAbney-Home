@@ -1,262 +1,266 @@
 /* --------------- Variables -------------------- */
 .Pomodoro {
-    --time: 1500s;
-    --background: #1A1A1A;
-    --container: #1A1A1A;
-    --text: #777777;
-    --main-clock: #86baa1;
-    --clock-light: #a0e8af;
-	--hilight: #ffcf56;
-	
-	height: 80%;
-	width: 80%;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
+  --time: 1500s;
+  --background: #1a1a1a;
+  --container: #1a1a1a;
+  --text: #777777;
+  --main-clock: #86baa1;
+  --clock-light: #a0e8af;
+  --hilight: #ffcf56;
 
-	img {
-		min-width: none;
-	}
-}
+  height: 80%;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: var(--background);
+  font-family: Geomanist;
 
-@font-face {
-    font-family: 'Geomanist';
-    src: 
-      local('Geomanist'),
-      url('/home/jeff/git_workspace/JeffAbney/src/static/fonts/geomanist-regular-webfont.ttf');
-}
+  img {
+    min-width: none;
+  }
 
-/* --------------- Common tags -------------------- */
-body {
-	background-color: var(--background);
-	font-family: Geomanist;
-}
-h1 {
-	text-align: center;
-	font-family: Geomanist;
-	color: var(--text);
-	font-weight: 300;
-}
-h2 {
-	color: var(--text);
-	font-weight: 300;
-}
-p {
-	size: 20px;
-	color: var(--text);
-}
-a {
-	margin: .5em;
-	color: var(--text);
-}
+  @font-face {
+    font-family: "Geomanist";
+    src: local("Geomanist"),
+      url("/home/jeff/git_workspace/JeffAbney/src/static/fonts/geomanist-regular-webfont.ttf");
+  }
 
+  /* --------------- Common tags -------------------- */
 
-/* ----------------- Specific tags ---------------------------*/
-.app{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
+  h1 {
+    text-align: center;
+    font-family: Geomanist;
+    color: var(--text);
+    font-weight: 300;
+  }
+  h2 {
+    color: var(--text);
+    font-weight: 300;
+  }
+  p {
+    size: 20px;
+    color: var(--text);
+  }
+  a {
+    margin: 0.5em;
+    color: var(--text);
+  }
 
-/*--------------- Dial Component Style --------------------- */
-.dial-container {
-	color: var(--background);
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	width: 300px;
-	height: 450px;
-	background-color: var(--container);
-}
+  /* ----------------- Specific tags ---------------------------*/
+  .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-.timer-label {
-	margin-top: 0;
-	margin-bottom: 50px;
-}
+  /*--------------- Dial Component Style --------------------- */
+  .dial-container {
+    color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+    height: 450px;
+    background-color: var(--container);
+  }
 
-.dial {
-	position: relative;
-	height: 200px;
-	width: 200px;
-	box-sizing: border-box;
-}
+  .timer-label {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
 
-.dial-border {
-	position: absolute;
-	top: -5px;
-	left: -5px;
-	height: 210px;
-	width: 210px;
-	z-index: 1000;
-}
+  .dial {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+  }
 
-.dial-number {
-	position: absolute;
-	z-index: 900;
-	color: var(--text);
-}
+  .dial-border {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: 210px;
+    width: 210px;
+    z-index: 1000;
+  }
 
-#full-time {
-	top: -35px;
-	left: 41%;
-}
+  .dial-number {
+    position: absolute;
+    z-index: 900;
+    color: var(--text);
+  }
 
-#quarter-time {
-	top: 45%;
-	right: -45px;
-}
+  #full-time {
+    top: -35px;
+    left: 41%;
+  }
 
-#half-time {
-	bottom: -35px;
-	left: 43%;
-}
+  #quarter-time {
+    top: 45%;
+    right: -45px;
+  }
 
-#three-quarter-time {
-	top: 45%;
-	left: -55px;
-}
+  #half-time {
+    bottom: -35px;
+    left: 43%;
+  }
 
+  #three-quarter-time {
+    top: 45%;
+    left: -55px;
+  }
 
-.dial-button {
-	position: absolute;
-	top: 40%;
-	left: 41%;
-	height: 35px;
-	width: 35px;
-	z-index: 1000;
-}
+  .dial-button {
+    position: absolute;
+    top: 40%;
+    left: 41%;
+    height: 35px;
+    width: 35px;
+    z-index: 1000;
+  }
 
-/*----------------Spinner Style and animation ---------------------- */
+  /*----------------Spinner Style and animation ---------------------- */
 
-.pie {
-  width: 50%;
-  height: 100%;
-  transform-origin: 100% 50%;
-  position: absolute;
-  background: var(--text);
-  border: 12px solid var(--background);
-  box-sizing: border-box;
-}
+  .pie {
+    width: 50%;
+    height: 100%;
+    transform-origin: 100% 50%;
+    position: absolute;
+    background: var(--text);
+    border: 12px solid var(--background);
+    box-sizing: border-box;
+  }
 
-.spinner {
-  border-radius: 100% 0 0 100% / 50% 0 0 50%;
-  z-index: 200;
-  border-right: none;
-  box-sizing: border-box;
-}
+  .spinner {
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    z-index: 200;
+    border-right: none;
+    box-sizing: border-box;
+  }
 
-.spinner-ani {
-  animation: rota var(--time) linear 1;
-  animation-play-state: running;
-}
+  .spinner-ani {
+    animation: rota var(--time) linear 1;
+    animation-play-state: running;
+  }
 
-.filler {
-  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
-  z-index: 100;
-  border-left: none;
-  left: 50%;
-  opacity: 0;
-  box-sizing: border-box;
-}
+  .filler {
+    border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+    z-index: 100;
+    border-left: none;
+    left: 50%;
+    opacity: 0;
+    box-sizing: border-box;
+  }
 
-.filler-ani {
-  animation: opa var(--time) steps(1, end) 1 reverse;
-  animation-play-state: running;
-}
+  .filler-ani {
+    animation: opa var(--time) steps(1, end) 1 reverse;
+    animation-play-state: running;
+  }
 
-.mask {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  z-index: 300;
-  opacity: 1;
-  background: var(--background);
-  box-sizing: border-box;
-}
+  .mask {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 300;
+    opacity: 1;
+    background: var(--background);
+    box-sizing: border-box;
+  }
 
-.mask-ani {
-  animation: opa var(--time) steps(1, end) 1;
-  animation-play-state: running;
-}
+  .mask-ani {
+    animation: opa var(--time) steps(1, end) 1;
+    animation-play-state: running;
+  }
 
-.paused {
-	animation-play-state: paused;
-}
+  .paused {
+    animation-play-state: paused;
+  }
 
-@keyframes rota {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-@keyframes opa {
-  0% { opacity: 1; }
-  50%, 100% { opacity: 0; }
-}
+  @keyframes rota {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes opa {
+    0% {
+      opacity: 1;
+    }
+    50%,
+    100% {
+      opacity: 0;
+    }
+  }
 
-/*------------------------------- Time Control Component Style --------------------- */
+  /*------------------------------- Time Control Component Style --------------------- */
 
-.time-control-container {
-	width: 90%;
-	margin-top: 40px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
+  .time-control-container {
+    width: 90%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.time-adjuster-container {
-	display: flex;
-	flex-direction: column;
-	align-content: space-between;
-	height: 75px;
-	width: 60px;
+  .time-adjuster-container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 75px;
+    width: 60px;
+  }
 
-}
+  .counter-and-arrow-container {
+    display: flex;
+    align-items: center;
+    color: var(--text);
+  }
 
-.counter-and-arrow-container {
-	display: flex;
-	align-items: center;
-	color: var(--text);
-}
+  .counter {
+    font-size: 24px;
+    margin: 0 2px 0 5px;
+  }
 
-.counter {
-	font-size: 24px;
-	margin: 0 2px 0 5px;
-}
+  .arrow {
+    height: 15px;
+    width: 10px;
+    padding-left: 3px;
+  }
 
-.arrow {
-	height: 15px;
-	width: 10px;
-	padding-left: 3px;
-}
+  .no-show {
+    display: none;
+  }
 
-.no-show {
-	display: none;
-}
+  .label {
+    margin: 0;
+    color: var(--text);
+  }
 
-.label {
-	margin: 0;
-	color: var(--text);
-}
+  .reset-button {
+    width: 87px;
+    height: 30px;
+  }
 
-.reset-button {
-	width: 87px;
-	height: 30px;
-}
+  .time-remaining {
+    margin-top: 0;
+    font-weight: 600;
+  }
 
-.time-remaining {
-	margin-top: 0;
-	font-weight: 600;
-}
+  /* ----------------- Footer Component Style ----------------------*/
 
-/* ----------------- Footer Component Style ----------------------*/
+  .footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-.footer-container {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-.footer-text {
-	text-align: center;
+  .footer-text {
+    text-align: center;
+  }
 }
