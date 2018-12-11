@@ -10,6 +10,7 @@ class App extends React.Component {
     Navbar: null,
     Hero: null,
     Projects: null,
+    About: null,
     Footer: null
   };
 
@@ -26,18 +27,22 @@ class App extends React.Component {
     import(/* webpackChunkName: 'Footer' */ './components/footer.js').then(Footer => {
       this.setState({ Footer: Footer.default})
     });
+    import(/* webpackChunkName: 'About' */ './components/about.js').then(About => {
+      this.setState({ About: About.default})
+    });
 
   }
   
 
   render() {
-    const { Navbar, Hero, Projects, Footer } = this.state;
+    const { Navbar, Hero, Projects, About, Footer } = this.state;
 
     return (
       <div className="app">
       {Navbar ? <Navbar/> : <p>Loading...</p>}
       {Hero ? <Hero/> : <p>Loading...</p>}
       {Projects ? <Projects/> : <p>Loading...</p>}
+      {About ? <About/> : <p>Loading...</p>}
       {Footer ? <Footer/> : <p>Loading...</p>}
       </div>
     );
