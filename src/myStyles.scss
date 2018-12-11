@@ -175,6 +175,27 @@ body {
   color: #fff;
 }
 
+/* ----------------- About Style ----------------- */
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 10% 0 10%;
+
+  .text-container {
+    width: 60%;
+  }
+
+  .image-container {
+    width: 40%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 /* ----------------- Footer Style ----------------- */
 
 .footer {
