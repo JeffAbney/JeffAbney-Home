@@ -478,15 +478,24 @@ body {
 
 // ---------------- App Appear Animation ----------------
 
+.project-overlay {
+  height: 100%;
+  width: 0%;
+  background-color: #fff;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 @keyframes show-app {
-  from { 
-    height: 0%;
+  from {
+    width: 100%;
   }
   to {
-    height: 80%;
+    width: 0%;
   }
 }
 
-.app-hide {
+.app-show {
   animation: show-app 1.5s;
 }

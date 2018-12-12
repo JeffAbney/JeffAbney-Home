@@ -168,7 +168,7 @@ const TimeRemainingDisplay = (props) => {
       <audio 
         className="beep" 
         id="beep" 
-        src="/home/jeff/git_workspace/JeffAbney/dist/sounds/beep.wav"/>
+        src="/home/jeff/git_workspace/JeffAbney/src/static/sounds/alarm.mp3"/>
     </div>
   );
 }
