@@ -1,38 +1,12 @@
 import React from 'react';
 
-
-const showProject = (event, el) => {
-  let element = document.getElementById(`big-slider-${el.id}`);
-  const oldClasses = element.className;
-  const name = "disappear";
-  const arr = element.className.split(" ");
-  if (arr.indexOf(name) == -1) {
-    element.className += " " + name;
-
-    setTimeout(function () {
-      document.getElementById(`project-grid-${el.id}`).style.display = 'none';
-      document.getElementById(`project-${el.id}`).style.backgroundColor = '#1A1A1A';
-      document.getElementById(`project-${el.id}`).style.justifyContent = 'center';
-      document.getElementById(`${el.appId}`).style.display = 'flex';
-      element.className = oldClasses;
-      document.getElementById(`overlay-${el.id}`).className += " app-show";
-    }
-      , 1500)
-  }
-
-  //animation where full project slides into viewport
-}
-
-
 const sliderFunctions =
 {
   1: (el) => {
     return (
       <div
         className={`slider-box slider-1 ${el.id % 2 === 0 ? 'right' : 'left'}`}
-        onClick={(e) => { showProject(e, el) }}
       >
-        <div className="big-slider" id="big-slider-1"></div>
         <div className="slider-bar bar-1 horizontal-slider-open"></div>
         <div className="slider-bar bar-2 horizontal-slider-open"></div>
         <div className="slider-bar bar-3 horizontal-slider-open"></div>
@@ -45,9 +19,7 @@ const sliderFunctions =
     return (
       <div
         className={`slider-box slider-2 ${el.id % 2 === 0 ? 'right' : 'left'}`}
-        onClick={(e) => { showProject(e, el) }}
       >
-        <div className="big-slider" id="big-slider-2"></div>
         <div className="slider-bar bar-1 vertical-slider-open"></div>
         <div className="slider-bar bar-2 vertical-slider-open"></div>
         <div className="slider-bar bar-3 vertical-slider-open"></div>
@@ -62,9 +34,7 @@ const sliderFunctions =
     return (
       <div
         className={`slider-box slider-3 ${el.id % 2 === 0 ? 'right' : 'left'}`}
-        onClick={(e) => { showProject(e, el) }}
       >
-        <div className="big-slider" id="big-slider-3"></div>
         <div className="slider-bar bar-1 vertical-slider-open"></div>
         <div className="slider-bar bar-2 vertical-slider-open"></div>
         <div className="slider-bar bar-3 vertical-slider-open"></div>
@@ -77,9 +47,7 @@ const sliderFunctions =
     return (
       <div
         className={`slider-box slider-4 ${el.id % 2 === 0 ? 'right' : 'left'}`}
-        onClick={(e) => { showProject(e, el) }}
       >
-        <div className="big-slider" id="big-slider-4"></div>
         <div className="slider-bar bar-1 horizontal-slider-open"></div>
         <div className="slider-bar bar-2 horizontal-slider-open"></div>
         <div className="slider-bar bar-3 horizontal-slider-open"></div>
@@ -99,9 +67,7 @@ const sliderFunctions =
     return (
       <div
         className={`slider-box slider-5 ${el.id % 2 === 0 ? 'right' : 'left'}`}
-        onClick={(e) => { showProject(e, el) }}
       >
-        <div className="big-slider" id="big-slider-5"></div>
         <div className="slider-bar bar-1 vertical-slider-open"></div>
         <div className="slider-bar bar-2 vertical-slider-open"></div>
         <div className="slider-bar bar-3 vertical-slider-open"></div>
@@ -155,7 +121,7 @@ function handleIntersect(entries, observer) {
       const elChildren = entry.target.children;
       const numberOfChildren = elChildren.length;
 
-      for (let i = 1; i < numberOfChildren; i++) {
+      for (let i = 0; i < numberOfChildren; i++) {
         var name, arr;
         name = "play";
         arr = elChildren[i].className.split(" ");
@@ -179,7 +145,7 @@ function handleIntersect(entries, observer) {
       const elChildren = entry.target.children;
       const numberOfChildren = elChildren.length;
 
-      for (let i = 1; i < numberOfChildren; i++) {
+      for (let i = 0; i < numberOfChildren; i++) {
         var name, arr, regEx, isMatch;
         name = "play";
         arr = elChildren[i].className.split(" ");
