@@ -7,11 +7,11 @@ const sliderFunctions =
       <div
         className={`slider-box slider-1 ${el.id % 2 === 0 ? 'right' : 'left'}`}
       >
-        <div className="slider-bar bar-1 horizontal-slider-open"></div>
-        <div className="slider-bar bar-2 horizontal-slider-open"></div>
-        <div className="slider-bar bar-3 horizontal-slider-open"></div>
-        <div className="slider-bar bar-4 horizontal-slider-open"></div>
-        <div className="slider-bar bar-5 horizontal-slider-open"></div>
+        <div className="slider-bar bar-1 horizontal-slider-close"></div>
+        <div className="slider-bar bar-2 horizontal-slider-close"></div>
+        <div className="slider-bar bar-3 horizontal-slider-close"></div>
+        <div className="slider-bar bar-4 horizontal-slider-close"></div>
+        <div className="slider-bar bar-5 horizontal-slider-close"></div>
       </div>
     )
   },
@@ -20,13 +20,13 @@ const sliderFunctions =
       <div
         className={`slider-box slider-2 ${el.id % 2 === 0 ? 'right' : 'left'}`}
       >
-        <div className="slider-bar bar-1 vertical-slider-open"></div>
-        <div className="slider-bar bar-2 vertical-slider-open"></div>
-        <div className="slider-bar bar-3 vertical-slider-open"></div>
-        <div className="slider-bar bar-4 vertical-slider-open"></div>
-        <div className="slider-bar bar-5 vertical-slider-open"></div>
-        <div className="slider-bar bar-6 vertical-slider-open"></div>
-        <div className="slider-bar bar-7 vertical-slider-open"></div>
+        <div className="slider-bar bar-1 vertical-slider-close"></div>
+        <div className="slider-bar bar-2 vertical-slider-close"></div>
+        <div className="slider-bar bar-3 vertical-slider-close"></div>
+        <div className="slider-bar bar-4 vertical-slider-close"></div>
+        <div className="slider-bar bar-5 vertical-slider-close"></div>
+        <div className="slider-bar bar-6 vertical-slider-close"></div>
+        <div className="slider-bar bar-7 vertical-slider-close"></div>
       </div>
     )
   },
@@ -35,10 +35,10 @@ const sliderFunctions =
       <div
         className={`slider-box slider-3 ${el.id % 2 === 0 ? 'right' : 'left'}`}
       >
-        <div className="slider-bar bar-1 vertical-slider-open"></div>
-        <div className="slider-bar bar-2 vertical-slider-open"></div>
-        <div className="slider-bar bar-3 vertical-slider-open"></div>
-        <div className="slider-bar bar-4 vertical-slider-open"></div>
+        <div className="slider-bar bar-1 vertical-slider-close"></div>
+        <div className="slider-bar bar-2 vertical-slider-close"></div>
+        <div className="slider-bar bar-3 vertical-slider-close"></div>
+        <div className="slider-bar bar-4 vertical-slider-close"></div>
       </div>
     )
   },
@@ -48,17 +48,17 @@ const sliderFunctions =
       <div
         className={`slider-box slider-4 ${el.id % 2 === 0 ? 'right' : 'left'}`}
       >
-        <div className="slider-bar bar-1 horizontal-slider-open"></div>
-        <div className="slider-bar bar-2 horizontal-slider-open"></div>
-        <div className="slider-bar bar-3 horizontal-slider-open"></div>
-        <div className="slider-bar bar-4 horizontal-slider-open"></div>
-        <div className="slider-bar bar-5 horizontal-slider-open"></div>
-        <div className="slider-bar bar-6 horizontal-slider-open"></div>
-        <div className="slider-bar bar-7 horizontal-slider-open"></div>
-        <div className="slider-bar bar-8 horizontal-slider-open"></div>
-        <div className="slider-bar bar-9 horizontal-slider-open"></div>
-        <div className="slider-bar bar-10 horizontal-slider-open"></div>
-        <div className="slider-bar bar-11 horizontal-slider-open"></div>
+        <div className="slider-bar bar-1 horizontal-slider-close"></div>
+        <div className="slider-bar bar-2 horizontal-slider-close"></div>
+        <div className="slider-bar bar-3 horizontal-slider-close"></div>
+        <div className="slider-bar bar-4 horizontal-slider-close"></div>
+        <div className="slider-bar bar-5 horizontal-slider-close"></div>
+        <div className="slider-bar bar-6 horizontal-slider-close"></div>
+        <div className="slider-bar bar-7 horizontal-slider-close"></div>
+        <div className="slider-bar bar-8 horizontal-slider-close"></div>
+        <div className="slider-bar bar-9 horizontal-slider-close"></div>
+        <div className="slider-bar bar-10 horizontal-slider-close"></div>
+        <div className="slider-bar bar-11 horizontal-slider-close"></div>
       </div>
     )
   },
@@ -68,12 +68,12 @@ const sliderFunctions =
       <div
         className={`slider-box slider-5 ${el.id % 2 === 0 ? 'right' : 'left'}`}
       >
-        <div className="slider-bar bar-1 vertical-slider-open"></div>
-        <div className="slider-bar bar-2 vertical-slider-open"></div>
-        <div className="slider-bar bar-3 vertical-slider-open"></div>
-        <div className="slider-bar bar-4 vertical-slider-open"></div>
-        <div className="slider-bar bar-5 vertical-slider-open"></div>
-        <div className="slider-bar bar-6 vertical-slider-open"></div>
+        <div className="slider-bar bar-1 vertical-slider-close"></div>
+        <div className="slider-bar bar-2 vertical-slider-close"></div>
+        <div className="slider-bar bar-3 vertical-slider-close"></div>
+        <div className="slider-bar bar-4 vertical-slider-close"></div>
+        <div className="slider-bar bar-5 vertical-slider-close"></div>
+        <div className="slider-bar bar-6 vertical-slider-close"></div>
       </div>
     )
   },
@@ -116,7 +116,7 @@ function createObserver() {
 
 function handleIntersect(entries, observer) {
   entries.forEach(function (entry) {
-    if (entry.intersectionRatio > 0.4) {
+    if (entry.intersectionRatio > 0.5) {
       entry.target.style.backgroundColor = "transparent";
       const elChildren = entry.target.children;
       const numberOfChildren = elChildren.length;
