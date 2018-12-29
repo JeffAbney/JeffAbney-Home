@@ -93,6 +93,7 @@ body {
 .projects-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 80vw;
   height: auto;
   background-color: #fff;
@@ -103,6 +104,7 @@ body {
     position: relative;
     display: flex;
     width: 100%;
+    max-width: 1200px;
     margin-top: 25px;
     margin-bottom: 100px;
 
@@ -153,7 +155,7 @@ body {
 
     .project-grid img {
       grid-area: i;
-      max-width: 100%;
+      max-width: 552px;
     }
   }
 
