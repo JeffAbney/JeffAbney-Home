@@ -3,7 +3,9 @@ import React from 'react';
 export default () => (
   <div className="footer">
     <div className="logo-container">
-      <img alt="Jeff Abney logo" src="/dist/images/JEFF_ICON.png" className="logo" />
+      <a href="http://www.JeffAbney.com" >
+        <img alt="Jeff Abney logo" src="/dist/images/JEFF_ICON.png" className="logo" />
+      </a>
     </div>
     <div className="social-container">
       <a

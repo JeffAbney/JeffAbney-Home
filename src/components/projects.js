@@ -65,6 +65,9 @@ const projects = () => {
 export default () => (
 
   <div className="projects-container" id="projects">
+    <div className="projects-header">
+      <h2>Projects</h2>
+    </div>
     {projects()}
   </div>
 )
