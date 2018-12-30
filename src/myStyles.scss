@@ -194,22 +194,32 @@ border-radius: 3px;
   .bio {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 120vh;
 
-    
-    .text-container {
+    .centering {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 60%;
-      margin: 180px 25px 0 25px;
-    }
-  
+
+      .text-container {
+        width: 50%;
+      }
+
+    } 
     .image-container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 40%;
     }
   
     img {
-      height: 100%;
+      height: 65%;
+      max-height: 1000px;
       width: auto;
-    }
+    }   
   }
 
   .skills {
