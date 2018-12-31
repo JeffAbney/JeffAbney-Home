@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './myStyles.scss';
 
 
@@ -43,16 +43,20 @@ class App extends React.Component {
     const { Navbar, Hero, Projects, About, Contact, Footer } = this.state;
 
     return (
-      <div className="app">
-        <Router>
-          {Navbar ? <Navbar/> : <p>Loading...</p>}
-          {Hero ? <Hero/> : <p>Loading...</p>}
-          {About ? <About/> : <p>Loading...</p>}
-          {Projects ? <Projects/> : <p>Loading...</p>}
-          {Contact ? <Contact/> : <p>Loading...</p>}
-          {Footer ? <Footer/> : <p>Loading...</p>}
-        </Router>
-      </div>
+      <Router>
+        <Route exact={true} path="/" render={() =>(
+          <div className="app">
+            {Navbar ? <Navbar/> : <p>Loading...</p>}
+            {Hero ? <Hero/> : <p>Loading...</p>}
+            {About ? <About/> : <p>Loading...</p>}
+            {Projects ? <Projects/> : <p>Loading...</p>}
+            {Contact ? <Contact/> : <p>Loading...</p>}
+            {Footer ? <Footer/> : <p>Loading...</p>}
+          </div>
+        )}/>
+        
+        <Route exact={true} path='/projects' component={Projects}/>
+      </Router>
     );
   };
 }
