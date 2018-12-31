@@ -8,8 +8,9 @@
   --clock-light: #a0e8af;
   --hilight: #ffcf56;
 
-  height: 80%;
-  width: 80%;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+
+import Pomodoro from '/home/jeff/git_workspace/JeffAbney/src/components/pomoApp.js';
 import './myStyles.scss';
 
 
@@ -55,7 +57,11 @@ class App extends React.Component {
           </div>
         )}/>
         
-        <Route exact={true} path='/projects' component={Projects}/>
+        <Route exact={true} path='/pomodoro'render={() =>(
+          <div className="app">
+          <Pomodoro/>
+          </div>
+        )}/>
       </Router>
     );
   };

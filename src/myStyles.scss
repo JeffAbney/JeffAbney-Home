@@ -137,7 +137,14 @@ border-radius: 3px;
         flex-direction: column;
         position: absolute;
         top: 15px;
-        z-index: 100;
+        z-index: 200;
+        text-decoration: none;
+        color: $color-black;
+
+        a {
+          text-decoration: none;
+          color: $color-black;
+        }
 
         h2 {
           margin-bottom: 5px;
@@ -171,9 +178,13 @@ border-radius: 3px;
       }
     }
 
-    .project-grid img {
+    .project-grid a  {
       grid-area: i;
-      max-width: 552px;
+      z-index: 100;
+
+      img{
+        max-width: 552px;
+      }
     }
   }
 
@@ -186,13 +197,6 @@ border-radius: 3px;
   }
 }
 
-.exit-button {
-  position: absolute;
-  top: 0;
-  right: 30px;
-  font-size: 24px;
-  color: #fff;
-}
 
 /* ----------------- About Style ----------------- */
 

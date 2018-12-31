@@ -10,7 +10,8 @@ const proArr = [
     id: 1,
     title: 'Pomodoro Clock',
     text: 'React - CSS - Animation',
-    image: clockImg
+    image: clockImg,
+    link: '/pomodoro'
   },
   {
     id: 2,
@@ -52,10 +53,14 @@ const projects = () => {
         id={`project-grid-${pro.id}`}>
         {Slider(pro)}
         <div className={`text-container`}>
+        <a href={pro.link} target="_blank">
           <h2>{pro.title}</h2>
           <p>{pro.text}</p>
+          </a>
         </div>
-        <img src={pro.image} />
+        <a href={pro.link} target="_blank">
+          <img src={pro.image} />
+        </a>
       </div>
     </div>
   );
