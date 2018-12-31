@@ -53,9 +53,9 @@ const projects = () => {
         id={`project-grid-${pro.id}`}>
         {Slider(pro)}
         <div className={`text-container`}>
-        <a href={pro.link} target="_blank">
-          <h2>{pro.title}</h2>
-          <p>{pro.text}</p>
+          <a href={pro.link} target="_blank">
+            <h2>{pro.title}</h2>
+            <p>{pro.text}</p>
           </a>
         </div>
         <a href={pro.link} target="_blank">
