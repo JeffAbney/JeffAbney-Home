@@ -8,7 +8,8 @@ export default () => (
         <div className="text-container about-text-container">
           <h3>I'm Jeff Abney.</h3>
           <p>Go getting, problem solving, self-taught and always learning. Bringing a unique perspective to Web Development</p>
-          <p>Born and raised near Chicago, I've lived and traveled in a variety of places.</p>
+          <p>My journey into web development has lead me to Javascript with React and Node. My enthusiasm for frontend comes from my desire to reach as many people as possible and make their experiences better.</p>
+          <p>I worked with some great people throughout my previous career as a teacher and learned a lot about the importance of personal connections and good communication.</p>
           <p>Looking for remote work opportunities and freelance work.</p>
         </div>
       </div>
@@ -26,7 +27,9 @@ export default () => (
     </div>
     <div className="resume">
       <h3>Download my resume</h3>
-      <button className="button">Learn more</button>
+      <a href="/home/jeff/git_workspace/JeffAbney/src/static/pdfs/resumeJA.pdf" target="_blank">
+        <button className="button">Learn more</button>
+      </a>
     </div>
   </div>
   )

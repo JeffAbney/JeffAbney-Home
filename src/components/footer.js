@@ -40,7 +40,6 @@ export default () => (
       </a>
       
     </div>
-    <a className="contact">CONTACT</a>
     <div className="credit">
       Developed by <a>Jeff Abney</a> &amp; Designed by <a>Daniela Trujillo</a>
     </div>

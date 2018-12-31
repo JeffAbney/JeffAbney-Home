@@ -11,6 +11,7 @@ class App extends React.Component {
     Hero: null,
     Projects: null,
     About: null,
+    Contact: null,
     Footer: null
   };
 
@@ -30,12 +31,15 @@ class App extends React.Component {
     import(/* webpackChunkName: 'About' */ './components/about.js').then(About => {
       this.setState({ About: About.default})
     });
+    import(/* webpackChunkName: 'Contact' */ './components/contact.js').then(Contact => {
+      this.setState({ Contact: Contact.default})
+    });
 
   }
   
 
   render() {
-    const { Navbar, Hero, Projects, About, Footer } = this.state;
+    const { Navbar, Hero, Projects, About, Contact, Footer } = this.state;
 
     return (
       <div className="app">
@@ -43,6 +47,7 @@ class App extends React.Component {
       {Hero ? <Hero/> : <p>Loading...</p>}
       {About ? <About/> : <p>Loading...</p>}
       {Projects ? <Projects/> : <p>Loading...</p>}
+      {Contact ? <Contact/> : <p>Loading...</p>}
       {Footer ? <Footer/> : <p>Loading...</p>}
       </div>
     );
