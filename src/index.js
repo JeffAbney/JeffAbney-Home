@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import './myStyles.scss';
 
 
@@ -43,12 +44,14 @@ class App extends React.Component {
 
     return (
       <div className="app">
-      {Navbar ? <Navbar/> : <p>Loading...</p>}
-      {Hero ? <Hero/> : <p>Loading...</p>}
-      {About ? <About/> : <p>Loading...</p>}
-      {Projects ? <Projects/> : <p>Loading...</p>}
-      {Contact ? <Contact/> : <p>Loading...</p>}
-      {Footer ? <Footer/> : <p>Loading...</p>}
+        <Router>
+          {Navbar ? <Navbar/> : <p>Loading...</p>}
+          {Hero ? <Hero/> : <p>Loading...</p>}
+          {About ? <About/> : <p>Loading...</p>}
+          {Projects ? <Projects/> : <p>Loading...</p>}
+          {Contact ? <Contact/> : <p>Loading...</p>}
+          {Footer ? <Footer/> : <p>Loading...</p>}
+        </Router>
       </div>
     );
   };
