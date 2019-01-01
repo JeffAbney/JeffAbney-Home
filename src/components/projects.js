@@ -3,6 +3,7 @@ import Slider from './slider.js';
 import clockImg from '/home/jeff/git_workspace/JeffAbney/dist/images/pomodoro.png';
 import drumMachineImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/DRUMS-IMG.jpg';
 import randomQuoteImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/quote.png';
+import calculatorImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/calculator.png';
 
 
 const proArr = [
@@ -17,26 +18,24 @@ const proArr = [
     id: 2,
     title: 'Drum Machine',
     text: 'React - CSS',
-    image: drumMachineImg
+    image: drumMachineImg,
+    link: '/drumMachine'
   },
   {
     id: 3,
     title: 'Random Quote Machine',
     text: 'React - API Connected - CSS',
-    image: randomQuoteImg
+    image: randomQuoteImg,
+    link: '/randomQuote'
   },
   {
     id: 4,
     title: 'Calculator',
     text: 'Javascript - React - CSS',
-    image: randomQuoteImg
+    image: calculatorImg,
+    link: '/calculator'
   },
-  {
-    id: 5,
-    title: 'Random Quote Machine',
-    text: 'React - API Connected - CSS',
-    image: randomQuoteImg
-  }
+
 ];
 
 
@@ -58,9 +57,7 @@ const projects = () => {
             <p>{pro.text}</p>
           </a>
         </div>
-        <a href={pro.link} target="_blank">
           <img src={pro.image} />
-        </a>
       </div>
     </div>
   );

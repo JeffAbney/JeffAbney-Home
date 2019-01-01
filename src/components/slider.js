@@ -4,19 +4,22 @@ const sliderFunctions =
 {
   1: (el) => {
     return (
-      <div
-        className={`slider-box slider-1 ${el.id % 2 === 0 ? 'right' : 'left'}`}
-      >
-        <div className="slider-bar bar-1 horizontal-slider-close"></div>
-        <div className="slider-bar bar-2 horizontal-slider-close"></div>
-        <div className="slider-bar bar-3 horizontal-slider-close"></div>
-        <div className="slider-bar bar-4 horizontal-slider-close"></div>
-        <div className="slider-bar bar-5 horizontal-slider-close"></div>
-      </div>
+      <a href={el.link} target="_blank">
+        <div
+          className={`slider-box slider-1 ${el.id % 2 === 0 ? 'right' : 'left'}`}
+        >
+          <div className="slider-bar bar-1 horizontal-slider-close"></div>
+          <div className="slider-bar bar-2 horizontal-slider-close"></div>
+          <div className="slider-bar bar-3 horizontal-slider-close"></div>
+          <div className="slider-bar bar-4 horizontal-slider-close"></div>
+          <div className="slider-bar bar-5 horizontal-slider-close"></div>
+        </div>
+      </a>
     )
   },
   2: (el) => {
     return (
+      <a href={el.link} target="_blank">
       <div
         className={`slider-box slider-2 ${el.id % 2 === 0 ? 'right' : 'left'}`}
       >
@@ -28,10 +31,12 @@ const sliderFunctions =
         <div className="slider-bar bar-6 vertical-slider-close"></div>
         <div className="slider-bar bar-7 vertical-slider-close"></div>
       </div>
+      </a>
     )
   },
   3: (el) => {
     return (
+      <a href={el.link} target="_blank">
       <div
         className={`slider-box slider-3 ${el.id % 2 === 0 ? 'right' : 'left'}`}
       >
@@ -40,11 +45,13 @@ const sliderFunctions =
         <div className="slider-bar bar-3 vertical-slider-close"></div>
         <div className="slider-bar bar-4 vertical-slider-close"></div>
       </div>
+      </a>
     )
   },
 
   4: (el) => {
     return (
+      <a href={el.link} target="_blank">
       <div
         className={`slider-box slider-4 ${el.id % 2 === 0 ? 'right' : 'left'}`}
       >
@@ -60,11 +67,13 @@ const sliderFunctions =
         <div className="slider-bar bar-10 horizontal-slider-close"></div>
         <div className="slider-bar bar-11 horizontal-slider-close"></div>
       </div>
+      </a>
     )
   },
 
   5: (el) => {
     return (
+      <a href={el.link} target="_blank">
       <div
         className={`slider-box slider-5 ${el.id % 2 === 0 ? 'right' : 'left'}`}
       >
@@ -75,6 +84,7 @@ const sliderFunctions =
         <div className="slider-bar bar-5 vertical-slider-close"></div>
         <div className="slider-bar bar-6 vertical-slider-close"></div>
       </div>
+      </a>
     )
   },
 }

@@ -178,13 +178,10 @@ border-radius: 3px;
       }
     }
 
-    .project-grid a  {
+    .project-grid img  {
       grid-area: i;
-      z-index: 100;
-
-      img{
-        max-width: 552px;
-      }
+      max-width: 552px;
+      
     }
   }
 
@@ -354,16 +351,16 @@ border-radius: 3px;
 
 /* ------------------- Slider Style -------------- */
 
-.slider-box {
+a .slider-box {
   display: flex;
-  flex-direction: column;
   position: absolute;
+  top: 0;
+  left: 0;
   grid-area: i;
   width: 100%;
   height: 100%;
   align-self: flex-end;
   background-color: transparent;
-  z-index: 500;
 }
 
 .slider-box.right {
@@ -394,6 +391,7 @@ border-radius: 3px;
 /* ------------------- Slider Animation ------------- */
 
 .slider-1 {
+  flex-direction: column;
   align-items: flex-end;
   @for $i from 1 through 5 {
     $time: 3 / #{$i};
@@ -405,7 +403,6 @@ border-radius: 3px;
 }
 
 .slider-2 {
-  flex-direction: row;
   @for $i from 1 through 7 {
     @if $i == 1 or $i == 7 {
       .bar-#{$i} {
@@ -458,6 +455,7 @@ border-radius: 3px;
 }
 
 .slider-4 {
+  flex-direction: column;
   .bar-1 {
     -webkit-transition: 0.9s;
     transition: 0.9s;
@@ -516,7 +514,6 @@ border-radius: 3px;
 }
 
 .slider-5 {
-  flex-direction: row;
   .bar-1 {
     -webkit-transition: 1.5s;
     transition: 1.5s;
