@@ -1,0 +1,359 @@
+:root {
+  --light-blue: #26ACEB;
+  --dark-blue: #103E6F;
+  --pink: #ED0B59;
+  --dark-pink: #B20540;
+  --yellow: #F8E71C;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/home/jeff/git_workspace/JeffAbney/src/static/images/mobile-bg.png');
+  height: 100vh;
+  font-family: 'Paytone One', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 400px;
+  width: 300px;
+  margin-top: -100px;
+}
+
+.title {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 0 15px 15px 15px;
+}
+
+.power-btn {
+  height: 60px;
+  width: 60px;
+  margin: 5px 5px 25px 5px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  font-family: 'Paytone One', sans-serif;
+  color: var(--dark-blue);
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 125px;
+  font-size: 20px;
+  font-family: 'Paytone One', sans-serif;
+}
+
+.drum-pad-container {
+  position: relative;
+  display: grid;
+  grid-template:
+    "q w e" 105px
+    "a s d" 105px
+    "z x c" 105px
+    /90px 90px 90px;
+  justify-items: center;
+  align-items: center;
+}
+
+.star-container {
+  position: absolute;
+  display: grid;
+  grid-template:
+    "sq sw se" 105px
+    "sa ss sd" 105px
+    "sz sx sc" 105px
+    /90px 90px 90px;
+  justify-items: center;
+  align-items: center;
+}
+
+.line-container {
+  position: absolute;
+  display: grid;
+  grid-template:
+    "qwe" 105px
+    "asd" 105px
+    "zxc" 105px
+    /90px;
+  justify-items: center;
+  align-items: center;
+}
+
+.line {
+	width: 240px;
+	height: 10px;
+}
+
+.drum-pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  font-family: 'Paytone One', sans-serif;
+  font-size: 24px;
+  background-color: var(--pink);
+  color: #fff;
+  border-radius: 50%;
+  margin: auto;
+  z-index: 100;
+}
+
+.drum-pad:Hover {
+  border: 5px solid var(--dark-pink);
+}
+
+
+  .active-true {
+    border-top: 5px solid var(--white);
+    border-right: 4px solid var(--white);
+    border-bottom: 3px solid var(--white);
+    border-left: 6px solid var(--white);
+  }
+  #dp-q {
+    grid-area: q;
+  }
+
+  #dp-w {
+    grid-area: w;
+  }
+
+  #dp-e {
+    grid-area: e;
+  }
+
+  #dp-a {
+    grid-area: a;
+  }
+
+  #dp-s {
+    grid-area: s;
+  }
+
+  #dp-d {
+    grid-area: d;
+  }
+
+  #dp-z {
+    grid-area: z;
+  }
+
+  #dp-x {
+    grid-area: x;
+  }
+
+  #dp-c {
+    grid-area: c;
+  }
+
+  /*------------------- Stars CSS ------------------- */
+
+  .star {
+  	height: 100px;
+  	width: 100px;
+  	z-index: 10;
+  	display: none;
+  }
+
+  #star-q {
+    grid-area: sq;
+  }
+
+  #star-w {
+    grid-area: sw;
+  }
+
+  #star-e {
+    grid-area: se;
+  }
+
+  #star-a {
+    grid-area: sa;
+  }
+
+  #star-s {
+    grid-area: ss;
+  }
+
+  #star-d {
+    grid-area: sd;
+  }
+
+  #star-z {
+    grid-area: sz;
+  }
+
+  #star-x {
+    grid-area: sx;
+  }
+
+  #star-c {
+    grid-area: sc;
+  }
+
+.volume-label {
+	display: none;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin-top: 10px;
+  font-family: 'Paytone One', sans-serif;
+  font-size: 22px;
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 20px; /* Specified height */
+  background: none; /* Grey background */
+  outline: none; /* Remove outline */
+  margin-top: 10px;
+}
+
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: var(--yellow); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+  border: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: var(--yellow); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+  border: none;
+}
+
+.slider::-webkit-slider-runnable-track {
+  background-color: var(--light-blue);
+  height: 7px;
+}
+
+.slider::-moz-range-track {
+  background-color: var(--light-blue);
+  height: 7px;
+}
+
+.slider::-ms-track {
+  background-color: var(--light-blue);
+  height: 7px;
+}
+
+/* ------------ Star Animation ----------------- */
+
+@keyframes starPop {
+	0% {height: 60px; width: 60px;}
+	50% {height: 120px; width: 120px;}
+	100% {height: 60px; width: 60px;}
+}
+
+.star-animation {
+	display: initial;
+	animation-name: starPop;
+	animation-duration: .5s;
+	animation-timing-function: ease;
+}
+
+/* ------------- Desktop Version ----------- */
+
+@media only screen and (min-width: 768px) {
+
+  .power-btn {
+  	margin-right: 20px;
+  	margin-left: 20px;
+  }
+
+  .drum-pad-container {
+    position: relative;
+    display: grid;
+    grid-template:
+      "q w e a s d z x c" 105px
+      /90px 90px 90px 90px 90px 90px 90px 90px 90px;
+    justify-items: center;
+    align-items: center;
+  }
+
+    #dp-q, #dp-c {
+      height: 70px;
+      width: 70px;
+      font-size: 36px;
+    }
+
+    #dp-w, #dp-x {
+      height: 60px;
+      width: 60px;
+      font-size: 30px;
+    }
+
+    #dp-e, #dp-z {
+      height: 50px;
+      width: 50px;
+      font-size: 24px;
+    }
+
+    #dp-a, #dp-d  {
+      height: 40px;
+      width: 40px;
+      font-size: 18px;
+    }
+
+    #dp-s {
+      height: 36px;
+      width: 36px;
+      font-size: 16px;
+    }
+
+  .star-container {
+    position: absolute;
+    display: grid;
+    grid-template:
+      "sq sw se sa ss sd sz sx sc" 105px
+      /90px 90px 90px 90px 90px 90px 90px 90px 90px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .line-container {
+    display: flex;
+  }  
+
+  .volume-label {
+  	display: initial;
+  	font-size: 28px;
+  	font-weight: 300;
+  	color: #fff;
+    margin-bottom: 10px;
+    margin-top: 50px;
+  }
+} 

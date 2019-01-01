@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import Pomodoro from '/home/jeff/git_workspace/JeffAbney/src/components/pomoApp.js';
+import DrumMachine from '/home/jeff/git_workspace/JeffAbney/src/components/projects/drum_machine/drumMachine.js';
 import './myStyles.scss';
 
 
@@ -63,9 +64,9 @@ class App extends React.Component {
           </div>
         )}/>
 
-        <Route exact={true} path='/calculator'render={() =>(
+        <Route exact={true} path='/drumMachine'render={() =>(
           <div className="app">
-          <Calculator/>
+          <DrumMachine/>
           </div>
         )}/>
       </Router>
