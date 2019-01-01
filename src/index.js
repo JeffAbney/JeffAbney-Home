@@ -62,6 +62,12 @@ class App extends React.Component {
           <Pomodoro/>
           </div>
         )}/>
+
+        <Route exact={true} path='/calculator'render={() =>(
+          <div className="app">
+          <Calculator/>
+          </div>
+        )}/>
       </Router>
     );
   };
