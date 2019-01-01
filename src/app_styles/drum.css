@@ -1,12 +1,10 @@
-:root {
+#drum-machine {
   --light-blue: #26ACEB;
   --dark-blue: #103E6F;
   --pink: #ED0B59;
   --dark-pink: #B20540;
   --yellow: #F8E71C;
-}
 
-#root {
   display: flex;
   justify-content: center;
   align-items: center;
