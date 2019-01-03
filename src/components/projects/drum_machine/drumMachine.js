@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '/home/jeff/git_workspace/JeffAbney/src/app_styles/drum.css';
+import '/home/jeff/git_workspace/JeffAbney/src/app_styles/drum.scss';
 import clap from '/home/jeff/git_workspace/JeffAbney/src/static/sounds/pearl-kit/clap.wav';
 import hiHat from '/home/jeff/git_workspace/JeffAbney/src/static/sounds/pearl-kit/pearlkit-hihat.wav';
 import hiHat0 from '/home/jeff/git_workspace/JeffAbney/src/static/sounds/pearl-kit/pearlkit-hihatO.wav';
@@ -162,7 +162,7 @@ class DrumMachine extends Component {
 
   render() {
     return (
-      <div className="App" id="drum-machine">
+      <div className="drum-machine">
         <div className="header">
           <h1 className="title">drums</h1>
           <div className="button-container">

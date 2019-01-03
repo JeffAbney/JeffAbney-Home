@@ -1,16 +1,23 @@
-#drum-machine {
+:root {
   --light-blue: #26ACEB;
   --dark-blue: #103E6F;
   --pink: #ED0B59;
   --dark-pink: #B20540;
   --yellow: #F8E71C;
+}
 
+.drum-machine {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('/home/jeff/git_workspace/JeffAbney/src/static/images/mobile-bg.png');
+  background-image: url('/src/static/images/mobile-bg.png');
   height: 100vh;
   font-family: 'Paytone One', sans-serif;
+}
+
+#app {
+  height: 100vh;
 }
 
 .App {
@@ -22,7 +29,6 @@
   width: 300px;
   margin-top: -100px;
 }
-
 .title {
   color: #fff;
   font-size: 48px;
@@ -287,6 +293,9 @@
 
 @media only screen and (min-width: 768px) {
 
+  .drum-machine {
+    background-image: url('/src/static/images/fondoD.png');
+  }
   .power-btn {
   	margin-right: 20px;
   	margin-left: 20px;

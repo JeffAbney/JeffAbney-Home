@@ -65,7 +65,7 @@ class App extends React.Component {
         )}/>
 
         <Route exact={true} path='/drumMachine'render={() =>(
-          <div className="app">
+          <div className="app drum-machine">
           <DrumMachine/>
           </div>
         )}/>
