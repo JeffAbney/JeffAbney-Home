@@ -1,0 +1,190 @@
+.app.calculator-app {
+  --black: #000f08;
+  --blue: #136f63;
+  --gold: #e0ca3c;
+  --red: #f34213;
+  --purple: #3e2f5b;
+
+  position: relative;
+  height: 100vh;
+
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--black);
+    height: 100%;
+	width: 100vw;
+	margin: 0;
+  }
+
+  .calculator {
+    display: grid;
+    grid-template:
+      ". solar solar ." 0.5fr
+      "discontainter discontainter discontainter discontainter" 2fr
+      "num num num num" 4fr
+      / 1fr 1fr 1fr 1fr;
+
+    background-color: var(--blue);
+    width: 350px;
+    height: 500px;
+  }
+  .solar-panel {
+    display: flex;
+    grid-area: solar;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+  }
+
+  .solar-panel:hover {
+    cursor: pointer;
+  }
+
+  .solar-panel-line {
+    flex-grow: 1;
+    height: 100%;
+    width: 10px;
+    border: 1px dotted darkgrey;
+  }
+
+  .display-container {
+    grid-area: discontainter;
+    display: grid;
+    grid-template:
+      "input input input input" 1.25fr
+      "display display display clear" 1fr
+      /1fr 1fr 1fr 1fr;
+    height: 100%;
+    width: 100%;
+  
+  .input-display {
+    grid-area: input;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gold);
+    color: var(--black);
+  }
+    p {
+    width: 100%;
+    word-wrap: break-word;
+    font-family: "Exo", sans-serif;
+  }
+
+  .display {
+    grid-area: display;
+	text-align: right;
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--purple);
+    font-size: 32px;
+    font-family: "Exo", sans-serif;
+  
+  p { width: 100%;
+max-height: 100%;
+margin: 0 20px 0 0;}
+}
+}
+  .number-pad {
+    grid-area: num;
+    display: grid;
+    grid-template:
+      "seven eight nine add" 1fr
+      "four five six subt" 1fr
+      "one two three mult" 1fr
+      "zero dec equ div" 1fr
+      /1fr 1fr 1fr 1fr;
+  }
+  #seven {
+    grid-area: seven;
+  }
+  #eight {
+    grid-area: eight;
+  }
+  #nine {
+    grid-area: nine;
+  }
+  #four {
+    grid-area: four;
+  }
+  #five {
+    grid-area: five;
+  }
+  #six {
+    grid-area: six;
+  }
+  #one {
+    grid-area: one;
+  }
+  #two {
+    grid-area: two;
+  }
+  #three {
+    grid-area: three;
+  }
+  #zero {
+    grid-area: zero;
+  }
+  #add {
+    grid-area: add;
+  }
+  #subtract {
+    grid-area: subt;
+  }
+  #multiply {
+    grid-area: mult;
+  }
+  #divide {
+    grid-area: div;
+  }
+  #decimal {
+    grid-area: dec;
+  }
+  #equals {
+    grid-area: equ;
+  }
+  #clear {
+    grid-area: clear;
+    background-color: var(--red);
+  }
+
+  .calc-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    border: 1px solid black;
+    border-right: none;
+    border-bottom: none;
+    font-size: 24px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: bold;
+    color: var(--gold);
+  }
+  .calc-button:hover {
+    cursor: pointer;
+  }
+
+  /*-------Fade animation for when solar panel is being hovered over -------*/
+
+  @keyframes solar-fade {
+    0% {
+      color: rgba(0, 0, 0, 1);
+    }
+    100% {
+      color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  .input-display.faded, .faded {
+    animation-name: solar-fade;
+    animation-duration: 2s;
+    color: rgba(0, 0, 0, 0);
+  }
+}
