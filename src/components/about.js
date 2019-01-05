@@ -23,12 +23,12 @@ export default () => (
       <p>- Javascript</p>
       <p>- React</p>
       <p>- Node</p>
-      <button className="button">Need a site?</button>
+      <a>Need a site?</a>
     </div>
     <div className="resume">
       <h3>Download my resume</h3>
-      <a href="/home/jeff/git_workspace/JeffAbney/src/static/pdfs/resumeJA.pdf" target="_blank">
-        <button className="button">Learn more</button>
+      <a href="/src/static/pdfs/JeffAbneyResume.pdf" target="_blank">
+        Learn more
       </a>
     </div>
   </div>

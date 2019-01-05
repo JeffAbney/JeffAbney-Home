@@ -18,6 +18,9 @@ body {
 }
 
 %yellow-button {
+display: flex;
+justify-content: center;
+align-items: center;
 background-color: #f5cd23;
 color: #030000;
 margin: 35px;
@@ -25,6 +28,7 @@ border: none;
 width: 110px;
 height: 35px;
 border-radius: 3px;
+text-decoration: none;
 }
 
 /* ------------- Navbar Style ------------------- */
@@ -87,8 +91,9 @@ border-radius: 3px;
     width: 400px;
     height: 200px;
 
-    .button {
+    a {
       @extend %yellow-button;
+    
     }
   }
 }
@@ -225,7 +230,7 @@ border-radius: 3px;
     .image-container {
       height: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       width: 40%;
     }
@@ -259,7 +264,7 @@ border-radius: 3px;
       font-size: 18px;
     }
 
-    button {
+    a {
       @extend %yellow-button;
     }
   }
@@ -277,7 +282,7 @@ border-radius: 3px;
       font-weight: 200;
     }
 
-    .button {
+    a {
       @extend %yellow-button;
     }
   }
@@ -301,6 +306,10 @@ border-radius: 3px;
     flex-direction: column;
     align-items: center;
     margin: 0;
+
+    a {
+      color: $color-black;
+    }
 
     img {
       height: 50px;
