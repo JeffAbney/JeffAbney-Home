@@ -8,8 +8,10 @@ export default () => (
       in developing Single Page Apps with HTML5, CSS, and Javascript with React.
     </p>
     <div className="hero-btn-container">
-      <button className="button hero-button">Need a site?</button>
-      <button className="button hero-button">Hire me</button>
+
+      <a href="/src/static/pdfs/JeffAbneyResume.pdf" target="_blank">
+        Hire me
+        </a>
     </div>
   </div>
 )
