@@ -23,7 +23,7 @@ export default () => (
       <p>- Javascript</p>
       <p>- React</p>
       <p>- Node</p>
-      <a>Need a site?</a>
+      <a href="#contact">Need a site?</a>
     </div>
     <div className="resume">
       <h3>Download my resume</h3>
