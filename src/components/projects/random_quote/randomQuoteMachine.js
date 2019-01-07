@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import '/home/jeff/git_workspace/JeffAbney/src/app_styles/quote.scss';
 import logo from '/home/jeff/git_workspace/JeffAbney/src/static/images/JEFF_ICON.png'
 
-const APIURL = 'https://talaikis.com/api/quotes';
+const APIURL = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=40';
 const tweetUrl = "https://twitter.com/intent/tweet?text=";
 let randomNumber = () => Math.floor((Math.random() * 4)) + 1;
 //End importing *********************************************
@@ -37,12 +37,13 @@ class RandomQuoteMachine extends Component {
 
           quoteCount: 0,
           cache: data,
-          quote: data[0].quote,
-          author: data[0].author,
+          quote: data[0].content,
+          author: data[0].title,
           btnDisabled: false,
           ready: true
         }))
-    }
+  }
+
 
   reset() {
     this.setState({
@@ -52,13 +53,13 @@ class RandomQuoteMachine extends Component {
   }
 
   handleClick(){
-      this.state.quoteCount === 100 ? this.reset() 
+      this.state.quoteCount === 39 ? this.reset() 
       :
         this.setState({
           colorCount: Math.floor((Math.random() * 4) + 1),
           quoteCount: this.state.quoteCount+1,
-          quote: this.state.cache[this.state.quoteCount+1].quote,
-          author: this.state.cache[this.state.quoteCount+1].author, 
+          quote: this.state.cache[this.state.quoteCount+1].content,
+          author: this.state.cache[this.state.quoteCount+1].title, 
          });
   }
 
@@ -89,7 +90,7 @@ class RandomQuoteMachine extends Component {
           this.state.ready ? 
             <p
               className={"quote-text color-"+this.state.colorCount}
-              id ="text">{this.state.quote}</p>
+              id ="text">{this.state.quote.slice(3, -5)}</p>
           :
             <div
               className="lds-ellipsis"
