@@ -30,11 +30,8 @@ const Dial = (props) => {
 
   const { 
     sessionLength,
-    breakLength, 
-    minutes,
-    seconds, 
+    breakLength,  
     timerIsRunning, 
-    timeIsAlmostUp, 
     isSession 
   } = props.state;
 
@@ -168,7 +165,7 @@ const TimeRemainingDisplay = (props) => {
       <audio 
         className="beep" 
         id="beep" 
-        src="/home/jeff/git_workspace/JeffAbney/src/static/sounds/alarm.mp3"/>
+        src="src/static/sounds/alarm.mp3"/>
     </div>
   );
 }
@@ -361,29 +358,26 @@ class Pomodoro extends Component {
       });
       let time = this.state.minutes;
       this.secondsRemaining = time * 60 + Number(this.state.seconds);
+      filler.style.setProperty("--time", this.secondsRemaining + "s");
+      spinner.style.setProperty("--time", this.secondsRemaining + "s");
+      mask.style.setProperty("--time", this.secondsRemaining + "s");
       this.timeoutHandle = setTimeout(this.ani, 500);
     }
     --this.secondsRemaining;
   }
 
   startCountdown() {
-    const filler = document.getElementById("filler");
-    const spinner = document.getElementById("spinner");
-    const mask = document.getElementById("mask");
     this.setState({
       timerIsRunning: true,
       plays: ++this.state.plays
     });
     this.intervalHandle = setInterval(this.tick, 1000);
     let time = this.state.minutes;
-    this.secondsRemaining = time * 60 + Number(this.state.seconds) - 1;
+    this.secondsRemaining = time * 60 + Number(this.state.seconds);
     if (this.state.plays === 1) {
-      filler.style.setProperty("--time", this.secondsRemaining + "s");
-      spinner.style.setProperty("--time", this.secondsRemaining + "s");
-      mask.style.setProperty("--time", this.secondsRemaining + "s");
-      this.timeoutHandle = setTimeout(this.ani, 1500);
+      this.timeoutHandle = setTimeout(this.ani, 1000);
     } else {
-      this.timeoutHandle = setTimeout(this.ani, 500);
+      this.timeoutHandle = setTimeout(this.ani, 400);
     }
   }
 
