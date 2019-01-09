@@ -31,7 +31,7 @@ class RandomQuoteMachine extends Component {
   }
 
   APIFetch() {
-    let regEx = /&|#/gi;
+    let regEx = /\&/gi;
     fetch(APIURL)
       .then(response => response.json())
       .then(data => this.setState({
@@ -106,7 +106,7 @@ class RandomQuoteMachine extends Component {
           <p className="quote-mark quote-mark-stop">”</p>
           <div className="author-container">
             <p className={"auto-text color-" + this.state.colorCount} id="author">
-              {this.state.author}
+              {this.state.author.replace("&#8217;", "'").replace("&#038;", "&")}
             </p>
           </div>
           <div className="twitter-link-container">
