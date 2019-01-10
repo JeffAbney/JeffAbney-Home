@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import Pomodoro from '/home/jeff/git_workspace/JeffAbney/src/components/pomoApp.js';
-import DrumMachine from '/home/jeff/git_workspace/JeffAbney/src/components/drumMachine.js';
-import RandomQuoteMachine from '/home/jeff/git_workspace/JeffAbney/src/components/randomQuoteMachine.js';
-import Calculator from '/home/jeff/git_workspace/JeffAbney/src/components/calculator.js';
+import DrumMachine from '/home/jeff/git_workspace/JeffAbney/src/components/projects/drum_machine/drumMachine.js';
+import RandomQuoteMachine from '/home/jeff/git_workspace/JeffAbney/src/components/projects/random_quote/randomQuoteMachine.js';
+import Calculator from '/home/jeff/git_workspace/JeffAbney/src/components/projects/calculator/calculator.js';
 import './myStyles.scss';
 
 

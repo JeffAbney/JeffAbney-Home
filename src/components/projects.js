@@ -3,7 +3,7 @@ import Slider from './slider.js';
 import clockImg from '/home/jeff/git_workspace/JeffAbney/dist/images/pomodoro.png';
 import drumMachineImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/DRUMS-IMG.jpg';
 import randomQuoteImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/quote.png';
-import calculatorImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/calculadora.png';
+import calculatorImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/calculatornpm.png';
 
 
 const proArr = [
