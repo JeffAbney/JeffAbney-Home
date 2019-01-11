@@ -555,3 +555,35 @@ a .slider-box {
   }
 }
 
+@media only screen and (min-device-width : 481px) and (max-width: 768px) {
+  .projects-container .project .project-grid img {
+    max-width: 300px;
+    
+  }
+
+  .projects-container .project .project-grid .text-container{
+    top: -15px;
+
+  }
+
+  .project-grid.left .text-container {
+    right: -40px;
+  }
+
+  .project-grid.right .text-container {
+    left: -40px;
+  }
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+
+.about .bio .centering .text-container {
+  width: 90%;
+}
+
+  .text-container p {
+    font-size: 14px;
+  }
+}
