@@ -1,10 +1,14 @@
 import React from 'react';
+import logo from "/home/jeff/git_workspace/JeffAbney/src/static/images/JEFF_ICON.png";
+import instagram from "/home/jeff/git_workspace/JeffAbney/src/static/images/instagram-logo.png";
+import twitter from "/home/jeff/git_workspace/JeffAbney/src/static/images/twitter.png";
+import github from "/home/jeff/git_workspace/JeffAbney/src/static/images/github-logo.png";
 
 export default () => (
   <div className="footer">
     <div className="logo-container">
       <a href="http://www.JeffAbney.com" >
-        <img alt="Jeff Abney logo" src="/dist/images/JEFF_ICON.png" className="logo" />
+        <img alt="Jeff Abney logo" src={logo} className="logo" />
       </a>
     </div>
     <div className="social-container">
@@ -14,7 +18,7 @@ export default () => (
       >
         <img
           alt="Instagram logo"
-          src="/dist/images/instagram-logo.png"
+          src={instagram}
           className="social-icon insta"
         />
       </a>
@@ -24,7 +28,7 @@ export default () => (
       >
         <img 
           alt="Twitter logo" 
-          src="/dist/images/twitter.png" 
+          src={twitter} 
           className="social-icon twitter"
         />
       </a>
@@ -34,7 +38,7 @@ export default () => (
       >
         <img 
           alt="Git Hub logo" 
-          src="/dist/images/github-logo.png" 
+          src={github}
           className="social-icon github"
         />
       </a>

@@ -1,9 +1,10 @@
 import React from 'react';
+import logoHeader from "/home/jeff/git_workspace/JeffAbney/src/static/images/logo_header.png";
 
 export default () => (
   <div className="nav-bar">
     <div className="logo-container">
-      <img alt="Jeff Abney logo" src="/dist/images/logo_header.png" className="header-logo"/>
+      <img alt="Jeff Abney logo" src={logoHeader} className="header-logo"/>
     </div>
     <div className="menu">
       <a href="#home" className="nav-home">HOME</a>

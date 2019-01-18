@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
-import Pomodoro from '/home/jeff/git_workspace/JeffAbney/src/components/pomoApp.js';
-import DrumMachine from '/home/jeff/git_workspace/JeffAbney/src/components/projects/drum_machine/drumMachine.js';
-import RandomQuoteMachine from '/home/jeff/git_workspace/JeffAbney/src/components/projects/random_quote/randomQuoteMachine.js';
-import Calculator from '/home/jeff/git_workspace/JeffAbney/src/components/projects/calculator/calculator.js';
 import './myStyles.scss';
 
 
@@ -18,7 +14,11 @@ class App extends React.Component {
     Projects: null,
     About: null,
     Contact: null,
-    Footer: null
+    Footer: null,
+    Pomodoro: null,
+    DrumMachine: null,
+    RandomQuoteMachine: null,
+    Calculator: null
   };
 
   componentDidMount() {
@@ -40,12 +40,23 @@ class App extends React.Component {
     import(/* webpackChunkName: 'Contact' */ './components/contact.js').then(Contact => {
       this.setState({ Contact: Contact.default})
     });
-
+    import(/* webpackChunkName: 'Pomodoro' */ './components/pomoApp.js').then(Pomodoro => {
+      this.setState({ Pomodoro: Pomodoro.default})
+    });
+    import(/* webpackChunkName: 'DrumMachine' */ './components/drumMachine.js').then(DrumMachine => {
+      this.setState({ DrumMachine: DrumMachine.default})
+    });
+    import(/* webpackChunkName: 'RandomQuoteMachine' */ './components/randomQuoteMachine.js').then(RandomQuoteMachine => {
+      this.setState({ RandomQuoteMachine: RandomQuoteMachine.default})
+    });
+    import(/* webpackChunkName: 'Calculator' */ './components/calculator.js').then(Calculator => {
+      this.setState({ Calculator: Calculator.default})
+    });
   }
   
 
   render() {
-    const { Navbar, Hero, Projects, About, Contact, Footer } = this.state;
+    const { Navbar, Hero, Projects, About, Contact, Footer, Pomodoro, RandomQuoteMachine, Calculator } = this.state;
 
     return (
       <Router>
@@ -61,7 +72,7 @@ class App extends React.Component {
         )}/>
         
         <Route exact={true} path='/pomodoro'render={() =>(
-          <div className="app">
+          <div className="app pomodoro">
           <Pomodoro/>
           </div>
         )}/>
