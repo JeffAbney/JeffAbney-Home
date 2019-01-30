@@ -10,7 +10,6 @@ import lowTom1 from '/home/jeff/git_workspace/JeffAbney/src/static/sounds/pearl-
 import lowTom2 from '/home/jeff/git_workspace/JeffAbney/src/static/sounds/pearl-kit/pearlkit-lowtom2.wav';
 import snare from '/home/jeff/git_workspace/JeffAbney/src/static/sounds/pearl-kit/pearlkit-snare1.wav';
 import lineMb from '/home/jeff/git_workspace/JeffAbney/src/static/images/line-mobile.png';
-import lineDt from '/home/jeff/git_workspace/JeffAbney/src/static/images/line-dt.png';
 import star from '/home/jeff/git_workspace/JeffAbney/src/static/images/Star.png';
 
 class DrumMachine extends Component {

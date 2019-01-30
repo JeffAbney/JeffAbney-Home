@@ -11,8 +11,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('/dist/images/mobile-bg.png');
+  background-image: url('/src/static/images/mobile-bg.png');
   height: 100vh;
+  width: 100%;
   font-family: 'Paytone One', sans-serif;
 }
 
@@ -294,7 +295,7 @@
 @media only screen and (min-width: 768px) {
 
   .drum-machine {
-    background-image: url('/dist/images/fondoD.png');
+    background-image: url('/src/static/images/fondoD.png');
   }
   .power-btn {
   	margin-right: 20px;
