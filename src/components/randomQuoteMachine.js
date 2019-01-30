@@ -62,7 +62,7 @@ class RandomQuoteMachine extends Component {
         quote: this.state.cache[this.state.quoteCount + 1].content,
         author: this.state.cache[this.state.quoteCount + 1].title
       });
-      console.log(this.state.cache)
+    console.log(this.state.cache)
   }
 
 
@@ -91,8 +91,8 @@ class RandomQuoteMachine extends Component {
             {
               this.state.ready ?
                 <p
-                  className={"quote-text color-" + this.state.colorCount}
-                  id="text">{this.state.quote.slice(3,-5).replace("&#8217;", "'")}</p>
+                  className="quote-text"
+                  id="text">{this.state.quote.slice(3, -5).replace("&#8217;", "'")}</p>
                 :
                 <div
                   className="lds-ellipsis"
@@ -105,7 +105,7 @@ class RandomQuoteMachine extends Component {
           </div>
           <p className="quote-mark quote-mark-stop">”</p>
           <div className="author-container">
-            <p className={"auto-text color-" + this.state.colorCount} id="author">
+            <p className="auto-text" id="author">
               {this.state.author.replace("&#8217;", "'").replace("&#038;", "&")}
             </p>
           </div>
@@ -117,7 +117,7 @@ class RandomQuoteMachine extends Component {
                 href={tweetUrl + this.state.quote + " -" + this.state.author}
                 target="_blank"
               >
-                <i className={"fab fa-twitter color-" + this.state.colorCount}></i>
+                <i className="fab fa-twitter"></i>
               </a>
             </div>
           </div>
@@ -128,20 +128,18 @@ class RandomQuoteMachine extends Component {
             onClick={this.handleClick}>New Quote</button>
         </div>
         <footer className="credit">
-          <p
-            className={"color-" + this.state.colorCount}
-          >
+          <p>
             Designed by&nbsp;
-        <a
+            <a
               href="http://daniela-trujillo.com/"
             >Daniela Trujillo
-        </a>
+            </a>
             &nbsp;and Developed by&nbsp;
-        <a
+            <a
               href="mailto: jeffmabney@gmail.com"
             >
               Jeff Abney
-        </a>
+            </a>
           </p>
         </footer>
       </div>
