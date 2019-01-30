@@ -11,6 +11,7 @@ import lowTom2 from '/home/jeff/git_workspace/JeffAbney/src/static/sounds/pearl-
 import snare from '/home/jeff/git_workspace/JeffAbney/src/static/sounds/pearl-kit/pearlkit-snare1.wav';
 import lineMb from '/home/jeff/git_workspace/JeffAbney/src/static/images/line-mobile.png';
 import star from '/home/jeff/git_workspace/JeffAbney/src/static/images/Star.png';
+import bgImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/fondoD.png';
 
 class DrumMachine extends Component {
 
@@ -162,6 +163,7 @@ class DrumMachine extends Component {
   render() {
     return (
       <div className="drum-machine">
+        <img className="background-image" src={bgImg}></img>
         <div className="header">
           <h1 className="title">drums</h1>
           <div className="button-container">
