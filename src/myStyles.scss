@@ -554,8 +554,19 @@ a .slider-box {
     transition-timing-function: ease;
   }
 }
-
+/* ------------------- Tablet Styles --------------------------- */
 @media only screen and (min-device-width : 481px) and (max-width: 768px) {
+
+  .nav-bar .logo-container {
+    margin-left: 20px;
+  }
+
+  .nav-bar .menu {
+    font-size: 16px;
+    justify-content: space-around;
+
+  }
+
   .projects-container .project .project-grid img {
     max-width: 300px;
     
@@ -576,42 +587,28 @@ a .slider-box {
 
 }
 
+/* ------------------- Mobile Styles --------------------- */
+
 @media only screen and (min-device-width : 320px) and (max-width: 480px) {
 
-  .nav-bar .logo-container {
-    margin-left: 20px;
-  }
-  .nav-bar .menu a {
-    font-size: 18px;
-    margin: 15px 10px 15px 10px;
+  .nav-bar{
+    padding-top: 10px;
+    flex-direction: column;
+
+    .menu {
+      margin: 0;
+      justify-content: space-evenly;
+
+      a:hover{
+        color: $color-black;
+      }
+
+      a:active{
+        color: $color-yellow;
+      }
+    }
   }
 
-  .nav-bar .menu {
-    display: grid;
-    width: 100%;
-    text-align: center;
-    grid-template: 
-        "home projects" 1fr
-        "about contact" 1fr
-        / 1fr 1fr;
-  }
-
-  .nav-home {
-    grid-area: home;
-    max-width: 100%;
-  }
-  .nav-projects {
-    grid-area: projects;
-    max-width: 100%;
-  }
-  .nav-about {
-    grid-area: about;
-    max-width: 100%;
-  }
-  .nav-contact {
-    grid-area: contact;
-    max-width: 100%;
-  }
 
  .hero h1 {
     font-size: 250%;
