@@ -1,9 +1,9 @@
 :root {
-  --light-blue: #26ACEB;
-  --dark-blue: #103E6F;
-  --pink: #ED0B59;
-  --dark-pink: #B20540;
-  --yellow: #F8E71C;
+  --light-blue: #26aceb;
+  --dark-blue: #103e6f;
+  --pink: #ed0b59;
+  --dark-pink: #b20540;
+  --yellow: #f8e71c;
 }
 
 .background-image {
@@ -23,7 +23,7 @@
   align-items: center;
   height: 100vh;
   width: 100%;
-  font-family: 'Paytone One', sans-serif;
+  font-family: "Paytone One", sans-serif;
 }
 
 #app {
@@ -63,7 +63,7 @@
   border-radius: 50%;
   border: none;
   font-size: 20px;
-  font-family: 'Paytone One', sans-serif;
+  font-family: "Paytone One", sans-serif;
   color: var(--dark-blue);
 }
 
@@ -74,7 +74,7 @@
   height: 40px;
   width: 125px;
   font-size: 20px;
-  font-family: 'Paytone One', sans-serif;
+  font-family: "Paytone One", sans-serif;
 }
 
 .drum-pad-container {
@@ -114,8 +114,8 @@
 }
 
 .line {
-	width: 240px;
-	height: 10px;
+  width: 240px;
+  height: 10px;
 }
 
 .drum-pad {
@@ -124,7 +124,7 @@
   align-items: center;
   height: 60px;
   width: 60px;
-  font-family: 'Paytone One', sans-serif;
+  font-family: "Paytone One", sans-serif;
   font-size: 24px;
   background-color: var(--pink);
   color: #fff;
@@ -133,100 +133,99 @@
   z-index: 100;
 }
 
-.drum-pad:Hover {
+.drum-pad:hover {
   border: 5px solid var(--dark-pink);
 }
 
+.active-true {
+  border-top: 5px solid var(--white);
+  border-right: 4px solid var(--white);
+  border-bottom: 3px solid var(--white);
+  border-left: 6px solid var(--white);
+}
+#dp-q {
+  grid-area: q;
+}
 
-  .active-true {
-    border-top: 5px solid var(--white);
-    border-right: 4px solid var(--white);
-    border-bottom: 3px solid var(--white);
-    border-left: 6px solid var(--white);
-  }
-  #dp-q {
-    grid-area: q;
-  }
+#dp-w {
+  grid-area: w;
+}
 
-  #dp-w {
-    grid-area: w;
-  }
+#dp-e {
+  grid-area: e;
+}
 
-  #dp-e {
-    grid-area: e;
-  }
+#dp-a {
+  grid-area: a;
+}
 
-  #dp-a {
-    grid-area: a;
-  }
+#dp-s {
+  grid-area: s;
+}
 
-  #dp-s {
-    grid-area: s;
-  }
+#dp-d {
+  grid-area: d;
+}
 
-  #dp-d {
-    grid-area: d;
-  }
+#dp-z {
+  grid-area: z;
+}
 
-  #dp-z {
-    grid-area: z;
-  }
+#dp-x {
+  grid-area: x;
+}
 
-  #dp-x {
-    grid-area: x;
-  }
+#dp-c {
+  grid-area: c;
+}
 
-  #dp-c {
-    grid-area: c;
-  }
+/*------------------- Stars CSS ------------------- */
 
-  /*------------------- Stars CSS ------------------- */
+.star {
+  height: 100px;
+  width: 100px;
+  z-index: 10;
+  display: none;
+}
 
-  .star {
-  	height: 100px;
-  	width: 100px;
-  	z-index: 10;
-  	display: none;
-  }
+#star-q {
+  grid-area: sq;
+}
 
-  #star-q {
-    grid-area: sq;
-  }
+#star-w {
+  grid-area: sw;
+}
 
-  #star-w {
-    grid-area: sw;
-  }
+#star-e {
+  grid-area: se;
+}
 
-  #star-e {
-    grid-area: se;
-  }
+#star-a {
+  grid-area: sa;
+}
 
-  #star-a {
-    grid-area: sa;
-  }
+#star-s {
+  grid-area: ss;
+}
 
-  #star-s {
-    grid-area: ss;
-  }
+#star-d {
+  grid-area: sd;
+}
 
-  #star-d {
-    grid-area: sd;
-  }
+#star-z {
+  grid-area: sz;
+}
 
-  #star-z {
-    grid-area: sz;
-  }
+#star-x {
+  grid-area: sx;
+}
 
-  #star-x {
-    grid-area: sx;
-  }
-
-  #star-c {
-    grid-area: sc;
-  }
+#star-c {
+  grid-area: sc;
+}
 
 .volume-label {
-	display: none;
+  display: none;
 }
 
 .slider-container {
@@ -236,13 +235,12 @@
   max-width: 500px;
   width: 90%;
   margin-top: 10px;
-  font-family: 'Paytone One', sans-serif;
+  font-family: "Paytone One", sans-serif;
   font-size: 22px;
 }
 
 .slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
-  appearance: none;
+  -webkit-appearance: none; /* Override default CSS styles */
   width: 100%; /* Full-width */
   height: 20px; /* Specified height */
   background: none; /* Grey background */
@@ -250,8 +248,17 @@
   margin-top: 10px;
 }
 
-
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+input[type="range"] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
 .slider::-webkit-slider-thumb {
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
@@ -259,6 +266,7 @@
   cursor: pointer; /* Cursor on hover */
   border-radius: 50%;
   border: none;
+  margin-top: -10px;
 }
 
 .slider::-moz-range-thumb {
@@ -288,25 +296,33 @@
 /* ------------ Star Animation ----------------- */
 
 @keyframes starPop {
-	0% {height: 60px; width: 60px;}
-	50% {height: 120px; width: 120px;}
-	100% {height: 60px; width: 60px;}
+  0% {
+    height: 60px;
+    width: 60px;
+  }
+  50% {
+    height: 120px;
+    width: 120px;
+  }
+  100% {
+    height: 60px;
+    width: 60px;
+  }
 }
 
 .star-animation {
-	display: initial;
-	animation-name: starPop;
-	animation-duration: .5s;
-	animation-timing-function: ease;
+  display: initial;
+  animation-name: starPop;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
 }
 
 /* ------------- Desktop Version ----------- */
 
 @media only screen and (min-width: 768px) {
-
   .power-btn {
-  	margin-right: 20px;
-  	margin-left: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 
   .drum-pad-container {
@@ -319,35 +335,39 @@
     align-items: center;
   }
 
-    #dp-q, #dp-c {
-      height: 70px;
-      width: 70px;
-      font-size: 36px;
-    }
+  #dp-q,
+  #dp-c {
+    height: 70px;
+    width: 70px;
+    font-size: 36px;
+  }
 
-    #dp-w, #dp-x {
-      height: 60px;
-      width: 60px;
-      font-size: 30px;
-    }
+  #dp-w,
+  #dp-x {
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+  }
 
-    #dp-e, #dp-z {
-      height: 50px;
-      width: 50px;
-      font-size: 24px;
-    }
+  #dp-e,
+  #dp-z {
+    height: 50px;
+    width: 50px;
+    font-size: 24px;
+  }
 
-    #dp-a, #dp-d  {
-      height: 40px;
-      width: 40px;
-      font-size: 18px;
-    }
+  #dp-a,
+  #dp-d {
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+  }
 
-    #dp-s {
-      height: 36px;
-      width: 36px;
-      font-size: 16px;
-    }
+  #dp-s {
+    height: 36px;
+    width: 36px;
+    font-size: 16px;
+  }
 
   .star-container {
     position: absolute;
@@ -361,14 +381,14 @@
 
   .line-container {
     display: flex;
-  }  
+  }
 
   .volume-label {
-  	display: initial;
-  	font-size: 28px;
-  	font-weight: 300;
-  	color: #fff;
+    display: initial;
+    font-size: 28px;
+    font-weight: 300;
+    color: #fff;
     margin-bottom: 10px;
     margin-top: 50px;
   }
-} 
+}
