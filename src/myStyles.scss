@@ -18,17 +18,17 @@ body {
 }
 
 %yellow-button {
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #f5cd23;
-color: #030000;
-margin: 35px;
-border: none;
-width: 110px;
-height: 35px;
-border-radius: 3px;
-text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5cd23;
+  color: #030000;
+  margin: 35px;
+  border: none;
+  width: 110px;
+  height: 35px;
+  border-radius: 3px;
+  text-decoration: none;
 }
 
 /* ------------- Navbar Style ------------------- */
@@ -93,7 +93,6 @@ text-decoration: none;
 
     a {
       @extend %yellow-button;
-    
     }
   }
 }
@@ -183,10 +182,9 @@ text-decoration: none;
       }
     }
 
-    .project-grid img  {
+    .project-grid img {
       grid-area: i;
       max-width: 552px;
-      
     }
   }
 
@@ -198,7 +196,6 @@ text-decoration: none;
     justify-content: flex-end;
   }
 }
-
 
 /* ----------------- About Style ----------------- */
 
@@ -225,8 +222,7 @@ text-decoration: none;
       .text-container {
         width: 50%;
       }
-
-    } 
+    }
     .image-container {
       height: 100%;
       display: flex;
@@ -234,12 +230,12 @@ text-decoration: none;
       align-items: center;
       width: 40%;
     }
-  
+
     img {
       height: 65%;
       max-height: 1000px;
       width: auto;
-    }   
+    }
   }
 
   .skills {
@@ -253,12 +249,11 @@ text-decoration: none;
     color: #fff;
     padding-bottom: 25px;
 
-
     h2 {
       color: $color-yellow;
       font-size: 42px;
     }
-    
+
     p {
       margin: 0 0 10px 0;
       font-size: 18px;
@@ -300,7 +295,6 @@ text-decoration: none;
   color: $color-black;
   padding: 120px 0 100px 0;
 
-
   .contact-text {
     display: flex;
     flex-direction: column;
@@ -318,8 +312,6 @@ text-decoration: none;
       margin-top: 25px;
     }
   }
-
-
 }
 
 /* ----------------- Footer Style ----------------- */
@@ -347,7 +339,6 @@ text-decoration: none;
       margin: 0 10px 0 10px;
     }
   }
-
 
   .credit {
     margin: 30px 0 30px 0;
@@ -555,8 +546,7 @@ a .slider-box {
   }
 }
 /* ------------------- Tablet Styles --------------------------- */
-@media only screen and (min-device-width : 481px) and (max-width: 768px) {
-
+@media only screen and (min-device-width: 481px) and (max-width: 860px) {
   .nav-bar .logo-container {
     margin-left: 20px;
   }
@@ -564,17 +554,14 @@ a .slider-box {
   .nav-bar .menu {
     font-size: 16px;
     justify-content: space-around;
-
   }
 
   .projects-container .project .project-grid img {
     max-width: 300px;
-    
   }
 
-  .projects-container .project .project-grid .text-container{
+  .projects-container .project .project-grid .text-container {
     top: -15px;
-
   }
 
   .project-grid.left .text-container {
@@ -584,14 +571,12 @@ a .slider-box {
   .project-grid.right .text-container {
     left: -40px;
   }
-
 }
 
 /* ------------------- Mobile Styles --------------------- */
 
-@media only screen and (min-device-width : 320px) and (max-width: 480px) {
-
-  .nav-bar{
+@media only screen and (min-device-width: 320px) and (max-width: 480px) {
+  .nav-bar {
     padding-top: 10px;
     flex-direction: column;
 
@@ -599,18 +584,17 @@ a .slider-box {
       margin: 0;
       justify-content: space-evenly;
 
-      a:hover{
+      a:hover {
         color: $color-black;
       }
 
-      a:active{
+      a:active {
         color: $color-yellow;
       }
     }
   }
 
-
- .hero h1 {
+  .hero h1 {
     font-size: 250%;
   }
 
@@ -623,15 +607,13 @@ a .slider-box {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-  
 
     .centering {
       width: 80%;
-    
+
       .text-container {
         width: 90%;
       }
-
     }
   }
 
@@ -651,9 +633,8 @@ a .slider-box {
     margin-top: 10;
   }
 
-  .projects-container .project .project-grid .text-container{
+  .projects-container .project .project-grid .text-container {
     top: -15px;
-
   }
 
   .project-grid.left .text-container {
@@ -669,9 +650,9 @@ a .slider-box {
   }
   .contact .contact-text {
     text-align: center;
-  p {
-    max-width: 90%;
-  }
+    p {
+      max-width: 90%;
+    }
   }
 
   .footer .credit {
