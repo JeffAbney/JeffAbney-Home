@@ -9,6 +9,7 @@
   --hilight: #ffcf56;
 
   height: 100vh;
+  min-height: 600px;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -23,8 +24,7 @@
 
   @font-face {
     font-family: "Geomanist";
-    src: local("Geomanist"),
-      url("/home/jeff/git_workspace/JeffAbney/src/static/fonts/geomanist-regular-webfont.ttf");
+    src: local("Geomanist"), url("/home/jeff/git_workspace/JeffAbney/src/static/fonts/geomanist-regular-webfont.ttf");
   }
 
   /* --------------- Common tags -------------------- */
