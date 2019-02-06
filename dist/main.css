@@ -1254,19 +1254,30 @@ a .slider-box {
         color: #030000; }
       .nav-bar .menu a:active {
         color: #f5cd23; }
+  .hero {
+    height: 70vh;
+    padding-top: 180px; }
   .hero h1 {
     font-size: 250%; }
   .hero p {
     min-width: 300px; }
-  .about .bio {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px; }
-    .about .bio .centering {
-      width: 80%; }
-      .about .bio .centering .text-container {
-        width: 90%; }
+  .about {
+    margin: 0;
+    padding-top: 75px; }
+    .about .bio {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 100px; }
+      .about .bio .centering {
+        width: 80%; }
+        .about .bio .centering .text-container {
+          width: 90%; }
+      .about .bio .image-container {
+        width: 100%;
+        justify-content: center;
+        height: auto;
+        margin-top: -25px; }
   .text-container p {
     font-size: 14px; }
   .projects-container .project .project-grid img {
@@ -1282,7 +1293,8 @@ a .slider-box {
   .project-grid.right .text-container {
     left: -40px; }
   .contact {
-    height: 50vh; }
+    height: 50vh;
+    padding-top: 60px; }
   .contact .contact-text {
     text-align: center; }
     .contact .contact-text p {
