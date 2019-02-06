@@ -8,6 +8,7 @@
   --clock-light: #a0e8af;
   --hilight: #ffcf56;
   height: 100vh;
+  min-height: 600px;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -188,11 +189,11 @@
     text-align: center; }
 
 :root {
-  --light-blue: #26ACEB;
-  --dark-blue: #103E6F;
-  --pink: #ED0B59;
-  --dark-pink: #B20540;
-  --yellow: #F8E71C; }
+  --light-blue: #26aceb;
+  --dark-blue: #103e6f;
+  --pink: #ed0b59;
+  --dark-pink: #b20540;
+  --yellow: #f8e71c; }
 
 .background-image {
   width: 100%;
@@ -210,7 +211,7 @@
   align-items: center;
   height: 100vh;
   width: 100%;
-  font-family: 'Paytone One', sans-serif; }
+  font-family: "Paytone One", sans-serif; }
 
 #app {
   height: 100vh; }
@@ -246,7 +247,7 @@
   border-radius: 50%;
   border: none;
   font-size: 20px;
-  font-family: 'Paytone One', sans-serif;
+  font-family: "Paytone One", sans-serif;
   color: var(--dark-blue); }
 
 .display {
@@ -256,7 +257,7 @@
   height: 40px;
   width: 125px;
   font-size: 20px;
-  font-family: 'Paytone One', sans-serif; }
+  font-family: "Paytone One", sans-serif; }
 
 .drum-pad-container {
   position: relative;
@@ -289,7 +290,7 @@
   align-items: center;
   height: 60px;
   width: 60px;
-  font-family: 'Paytone One', sans-serif;
+  font-family: "Paytone One", sans-serif;
   font-size: 24px;
   background-color: var(--pink);
   color: #fff;
@@ -297,7 +298,7 @@
   margin: auto;
   z-index: 100; }
 
-.drum-pad:Hover {
+.drum-pad:hover {
   border: 5px solid var(--dark-pink); }
 
 .active-true {
@@ -377,13 +378,12 @@
   max-width: 500px;
   width: 90%;
   margin-top: 10px;
-  font-family: 'Paytone One', sans-serif;
+  font-family: "Paytone One", sans-serif;
   font-size: 22px; }
 
 .slider {
   -webkit-appearance: none;
   /* Override default CSS styles */
-  appearance: none;
   width: 100%;
   /* Full-width */
   height: 20px;
@@ -395,6 +395,17 @@
   margin-top: 10px; }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+input[type="range"] {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */ }
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; }
+
 .slider::-webkit-slider-thumb {
   width: 25px;
   /* Set a specific slider handle width */
@@ -405,7 +416,8 @@
   cursor: pointer;
   /* Cursor on hover */
   border-radius: 50%;
-  border: none; }
+  border: none;
+  margin-top: -10px; }
 
 .slider::-moz-range-thumb {
   width: 25px;
@@ -446,7 +458,7 @@
 .star-animation {
   display: initial;
   animation-name: starPop;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-timing-function: ease; }
 
 /* ------------- Desktop Version ----------- */
@@ -460,19 +472,23 @@
     grid-template: "q w e a s d z x c" 105px /90px 90px 90px 90px 90px 90px 90px 90px 90px;
     justify-items: center;
     align-items: center; }
-  #dp-q, #dp-c {
+  #dp-q,
+  #dp-c {
     height: 70px;
     width: 70px;
     font-size: 36px; }
-  #dp-w, #dp-x {
+  #dp-w,
+  #dp-x {
     height: 60px;
     width: 60px;
     font-size: 30px; }
-  #dp-e, #dp-z {
+  #dp-e,
+  #dp-z {
     height: 50px;
     width: 50px;
     font-size: 24px; }
-  #dp-a, #dp-d {
+  #dp-a,
+  #dp-d {
     height: 40px;
     width: 40px;
     font-size: 18px; }
@@ -726,7 +742,8 @@
       .app.calculator-app .display-container .display p {
         width: 100%;
         max-height: 100%;
-        margin: 0 20px 0 0; }
+        margin: 0 20px 0 0;
+        color: #fff; }
   .app.calculator-app .number-pad {
     grid-area: num;
     display: grid;
@@ -783,13 +800,13 @@
 
 @keyframes solar-fade {
   0% {
-    color: #fff; }
+    opacity: 1; }
   100% {
-    color: rgba(0, 0, 0, 0); } }
-  .app.calculator-app .input-display.faded, .app.calculator-app .faded {
+    opacity: 0; } }
+  .app.calculator-app p.faded {
     animation-name: solar-fade;
     animation-duration: 2s;
-    color: rgba(0, 0, 0, 0); }
+    opacity: 0; }
 
 body {
   background-color: #030000;
@@ -1210,7 +1227,7 @@ a .slider-box {
   transition-timing-function: ease; }
 
 /* ------------------- Tablet Styles --------------------------- */
-@media only screen and (min-device-width: 481px) and (max-width: 768px) {
+@media only screen and (min-device-width: 481px) and (max-width: 860px) {
   .nav-bar .logo-container {
     margin-left: 20px; }
   .nav-bar .menu {

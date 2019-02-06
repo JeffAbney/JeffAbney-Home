@@ -9,7 +9,7 @@ export default () => (
     </p>
     <div className="hero-btn-container">
 
-      <a href="/src/static/pdfs/JeffAbneyResume.pdf" target="_blank">
+      <a href="JeffAbneyResume.pdf" target="_blank">
         Hire me
         </a>
     </div>

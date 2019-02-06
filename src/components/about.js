@@ -27,7 +27,7 @@ export default () => (
     </div>
     <div className="resume">
       <h3>Download my resume</h3>
-      <a href="/src/static/pdfs/JeffAbneyResume.pdf" target="_blank">
+      <a href="JeffAbneyResume.pdf" target="_blank">
         Learn more
       </a>
     </div>
