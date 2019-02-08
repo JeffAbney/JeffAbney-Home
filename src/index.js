@@ -53,8 +53,8 @@ class App extends React.Component {
           <div className="app">
             {Navbar ? <Navbar/> : <p>Loading...</p>}
             {Hero ? <Hero/> : <p>Loading...</p>}
-            {About ? <About/> : <p>Loading...</p>}
             {Projects ? <Projects/> : <p>Loading...</p>}
+            {About ? <About/> : <p>Loading...</p>}
             {Contact ? <Contact/> : <p>Loading...</p>}
             {Footer ? <Footer/> : <p>Loading...</p>}
           </div>

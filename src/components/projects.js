@@ -53,7 +53,7 @@ const projects = () => {
         {Slider(pro)}
         <div className={`text-container`}>
           <a href={pro.link} target="_blank">
-            <h2>{pro.title}</h2>
+            <h3>{pro.title}</h3>
             <p>{pro.text}</p>
           </a>
         </div>
@@ -67,9 +67,6 @@ const projects = () => {
 export default () => (
 
   <div className="projects-container" id="projects">
-    <div className="projects-header">
-      <h2>Projects</h2>
-    </div>
     {projects()}
   </div>
 )

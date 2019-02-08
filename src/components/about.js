@@ -7,10 +7,10 @@ export default () => (
       <div className="centering">
         <div className="text-container about-text-container">
           <h3>I'm Jeff Abney.</h3>
-          <p>Go getting, problem solving, self-taught and always learning. Bringing a unique perspective to Web Development</p>
+          <p>Go getting, problem solving, self-taught and always learning. I bring a unique perspective to Web Development</p>
           <p>My journey into web development has lead me to Javascript with React and Node. My enthusiasm for frontend comes from my desire to reach as many people as possible and make their experiences better.</p>
           <p>I worked with some great people throughout my previous career as a teacher and learned a lot about the importance of personal connections and good communication.</p>
-          <p>Looking for remote work opportunities and freelance work.</p>
+          <p>I'm looking for remote work opportunities and freelance work.</p>
         </div>
       </div>
       <div className="image-container about-image-container">
@@ -23,13 +23,15 @@ export default () => (
       <p>- Javascript</p>
       <p>- React</p>
       <p>- Node</p>
+      <div className="btn-container">
       <a href="#contact">Need a site?</a>
-    </div>
-    <div className="resume">
-      <h3>Download my resume</h3>
       <a href="JeffAbneyResume.pdf" target="_blank">
         Learn more
       </a>
+      </div>
     </div>
+    
+      
+    
   </div>
   )
