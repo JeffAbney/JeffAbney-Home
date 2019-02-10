@@ -4,6 +4,7 @@ import clockImg from '/home/jeff/git_workspace/JeffAbney/dist/images/pomodoro.pn
 import drumMachineImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/DRUMS-IMG.jpg';
 import randomQuoteImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/quote.png';
 import calculatorImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/calculator.png';
+import JAcomImg from '/home/jeff/git_workspace/JeffAbney/src/static/images/JAcom.jpg';
 
 
 const proArr = [
@@ -34,6 +35,13 @@ const proArr = [
     text: 'Javascript - React - CSS',
     image: calculatorImg,
     link: '/calculator'
+  },
+  {
+    id: 5,
+    title: 'JeffAbney.com',
+    text: 'Javascript - React - SCSS - Animation',
+    image: JAcomImg,
+    link: 'https://github.com/JeffAbney/JeffAbney-Home'
   },
 
 ];
