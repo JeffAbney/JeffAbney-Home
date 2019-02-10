@@ -42,10 +42,32 @@ class App extends React.Component {
     });
 
   }
+
   
 
   render() {
     const { Navbar, Hero, Projects, About, Contact, Footer } = this.state;
+
+    var el = document.querySelector("#contact");
+
+    var isInViewport = function(el) {
+      var bounding = el.getBoundingClientRect();
+      return (
+          bounding.top >= 0 &&
+          bounding.left >= 0 &&
+          bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+    
+    window.addEventListener('scroll', function (event) {
+      console.log(el);
+      if (isInViewport(el)) {
+        console.log("I see it!");
+      } else {
+        console.log("nope")
+      }
+    }, false);
 
     return (
       <Router>
