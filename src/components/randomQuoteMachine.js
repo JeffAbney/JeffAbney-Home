@@ -79,7 +79,7 @@ class RandomQuoteMachine extends Component {
 
     return (
       <div className={`page color-${colorCount}`}>
-        <a href="http://jeffabney.com" className="logo-container">
+        <a href="https://jeffabney.com" className="logo-container">
           <img src={logo} alt="Jeff Abney logo" className="logo" />
         </a>
         <div

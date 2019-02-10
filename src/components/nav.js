@@ -3,7 +3,7 @@ import logoHeader from "/home/jeff/git_workspace/JeffAbney/src/static/images/log
 
 export default () => (
   <div className="nav-bar">
-    <a href="http://jeffabney.com" className="logo-container">
+    <a href="https://jeffabney.com" className="logo-container">
       <img alt="Jeff Abney logo" src={logoHeader} className="header-logo"/>
     </a>
     <div className="menu">
