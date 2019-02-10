@@ -812,7 +812,8 @@ body {
   background-color: #030000;
   color: #fff;
   margin: 0;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 .app {
   display: flex;
@@ -821,7 +822,7 @@ body {
   width: 100vw;
   font-family: "Lato", sans-serif; }
 
-.hero .hero-btn-container a, .about .skills a, .about .resume a {
+.btn-container a, .about .skills a, .about .resume a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -833,6 +834,15 @@ body {
   height: 35px;
   border-radius: 3px;
   text-decoration: none; }
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  height: 200px; }
+
+h2 {
+  font-size: 42px; }
 
 /* ------------- Navbar Style ------------------- */
 .nav-bar {
@@ -874,15 +884,9 @@ body {
     width: 35%;
     min-width: 350px;
     text-align: center; }
-  .hero .hero-btn-container {
-    display: flex;
-    justify-content: center;
-    width: 400px;
-    height: 200px; }
 
 /* ------------------- Projects Section Style -------------- */
 .projects-container {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -890,17 +894,7 @@ body {
   height: auto;
   background-color: #fff;
   color: #030000;
-  padding: 80px 15% 0 15%; }
-  .projects-container .projects-header {
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #030000;
-    color: #f5cd23;
-    height: 100px;
-    width: 100vw; }
+  padding: 90px 15% 0 15%; }
   .projects-container .project {
     position: relative;
     display: flex;
@@ -912,6 +906,8 @@ body {
       display: grid;
       position: relative;
       max-width: 100%; }
+      .projects-container .project .project-grid a {
+        height: 0; }
       .projects-container .project .project-grid .text-container {
         grid-area: t;
         display: flex;
@@ -924,7 +920,8 @@ body {
         .projects-container .project .project-grid .text-container a {
           text-decoration: none;
           color: #030000; }
-        .projects-container .project .project-grid .text-container h2 {
+        .projects-container .project .project-grid .text-container h3 {
+          font-size: 24px;
           margin-bottom: 5px; }
         .projects-container .project .project-grid .text-container p {
           margin-top: 0; }
@@ -948,7 +945,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  margin: 50px 10% 0 10%;
+  margin: 0px 10% 0 10%;
   background-color: #fff;
   color: #030000; }
   .about .bio {
