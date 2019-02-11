@@ -7,7 +7,7 @@ import github from "/home/jeff/git_workspace/JeffAbney/src/static/images/github-
 export default () => (
   <div className="footer">
     <div className="logo-container">
-      <a href="http://www.JeffAbney.com" >
+      <a href="https://www.JeffAbney.com" >
         <img alt="Jeff Abney logo" src={logo} className="logo" />
       </a>
     </div>
