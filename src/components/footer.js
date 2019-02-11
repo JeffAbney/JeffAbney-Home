@@ -45,7 +45,7 @@ export default () => (
       
     </div>
     <div className="credit">
-      Developed by <a href="http://jeffabney.com" target="_blank">Jeff Abney</a> &amp; Designed by <a href="https://daniela-trujillo.com" target="_blank">Daniela Trujillo</a>
+      Developed by <a href="https://jeffabney.com" target="_blank">Jeff Abney</a> &amp; Designed by <a href="https://daniela-trujillo.com" target="_blank">Daniela Trujillo</a>
     </div>
   </div>
 )
