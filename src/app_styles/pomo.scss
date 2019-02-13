@@ -77,7 +77,9 @@
   .dial {
     position: relative;
     height: 200px;
+    min-height: 200px;
     width: 200px;
+    min-width: 200px;
     box-sizing: border-box;
   }
 
@@ -85,8 +87,8 @@
     position: absolute;
     top: -5px;
     left: -5px;
-    height: 210px;
-    width: 210px;
+    height: 100%;
+    width: 100%;
     z-index: 900;
   }
 
@@ -98,17 +100,17 @@
 
   #full-time {
     top: -35px;
-    left: 41%;
+    left: 40%;
   }
 
   #quarter-time {
     top: 45%;
-    right: -45px;
+    right: -40px;
   }
 
   #half-time {
     bottom: -35px;
-    left: 43%;
+    left: 40%;
   }
 
   #three-quarter-time {
