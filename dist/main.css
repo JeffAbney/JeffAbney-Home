@@ -808,9 +808,6 @@ input[type="range"]::-webkit-slider-thumb {
     animation-duration: 2s;
     opacity: 0; }
 
-html {
-  width: 100vw; }
-
 body {
   background-color: #030000;
   color: #fff;
