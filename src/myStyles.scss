@@ -2,6 +2,10 @@ $color-black: #030000;
 $color-grey: #343434;
 $color-yellow: #f5cd23;
 
+html {
+  width: 100vw;
+}
+
 body {
   background-color: $color-black;
   color: #fff;
@@ -635,7 +639,11 @@ a .slider-box {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+
+    img {
+      width: 60%;
+      height: auto;
+    }
 
     .centering {
       width: 80%;
