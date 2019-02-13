@@ -7,10 +7,10 @@ export default () => (
       <img alt="Jeff Abney logo" src={logoHeader} className="header-logo"/>
     </a>
     <div className="menu">
-      <a href="#home" className="nav-home">HOME</a>
-      <a href="#projects" className="projects-home">PROJECTS</a>
-      <a href="#about" className="about-home">ABOUT</a>
-      <a href="#contact" className="contact-home">CONTACT</a>
+      <a href="#home" className="btn-nav nav-home">HOME</a>
+      <a href="#projects" className="btn-nav nav-projects">PROJECTS</a>
+      <a href="#about" className="btn-nav nav-about">ABOUT</a>
+      <a href="#contact" className="btn-nav nav-contact">CONTACT</a>
     </div>  
   </div>
 )

@@ -844,6 +844,21 @@ body {
 h2 {
   font-size: 42px; }
 
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */ }
+
 /* ------------- Navbar Style ------------------- */
 .nav-bar {
   position: fixed;
@@ -1247,6 +1262,9 @@ a .slider-box {
     .nav-bar .menu {
       margin: 0;
       justify-content: space-evenly; }
+      .nav-bar .menu .btn-nav {
+        font-size: 14px;
+        margin: 10px; }
       .nav-bar .menu a:hover {
         color: #030000; }
       .nav-bar .menu a:active {
@@ -1254,13 +1272,17 @@ a .slider-box {
   .hero {
     height: 70vh;
     padding-top: 180px; }
+    .hero .btn-container {
+      width: 100%;
+      justify-content: space-evenly;
+      font-size: 14px; }
   .hero h1 {
-    font-size: 250%; }
+    font-size: 30px; }
   .hero p {
-    min-width: 300px; }
+    min-width: 250px; }
   .about {
     margin: 0;
-    padding-top: 75px; }
+    padding-top: 110px; }
     .about .bio {
       flex-direction: column;
       justify-content: center;
@@ -1274,11 +1296,14 @@ a .slider-box {
         width: 100%;
         justify-content: center;
         height: auto;
-        margin-top: -25px; }
+        align-items: flex-start;
+        margin-top: 30px; }
   .text-container p {
     font-size: 14px; }
-  .projects-container .project .project-grid img {
-    max-width: 225px; }
+  .projects-container .project {
+    margin-bottom: 50px; }
+    .projects-container .project .project-grid img {
+      max-width: 225px; }
   #project-1 {
     margin-top: 80px; }
   .projects-container .project {
@@ -1289,6 +1314,8 @@ a .slider-box {
     right: -40px; }
   .project-grid.right .text-container {
     left: -40px; }
+  a .slider-box {
+    width: 225px; }
   .contact {
     height: 50vh;
     padding-top: 60px; }

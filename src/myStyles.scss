@@ -594,6 +594,11 @@ a .slider-box {
       margin: 0;
       justify-content: space-evenly;
 
+      .btn-nav {
+      font-size: 14px;
+      margin: 10px;
+      }
+
       a:hover {
         color: $color-black;
       }
@@ -607,19 +612,25 @@ a .slider-box {
   .hero {
     height: 70vh;
     padding-top: 180px;
+
+    .btn-container {
+      width: 100%;
+      justify-content: space-evenly;
+      font-size: 14px;
+    }
   }
 
   .hero h1 {
-    font-size: 250%;
+    font-size: 30px;
   }
 
   .hero p {
-    min-width: 300px;
+    min-width: 250px;
   }
 
   .about{
     margin: 0;
-    padding-top: 75px;
+    padding-top: 110px;
     .bio {
     flex-direction: column;
     justify-content: center;
@@ -638,18 +649,25 @@ a .slider-box {
       width: 100%;
       justify-content: center;
       height: auto;
-      margin-top: -25px;
+      align-items: flex-start;
+      margin-top: 30px;
     }
   }
+
+
 }
 
   .text-container p {
     font-size: 14px;
   }
 
-  .projects-container .project .project-grid img {
-    max-width: 225px;
-  }
+  .projects-container .project {
+    margin-bottom: 50px;
+
+    .project-grid img {
+      max-width: 225px;
+    }
+  } 
 
   #project-1 {
     margin-top: 80px;
@@ -669,6 +687,10 @@ a .slider-box {
 
   .project-grid.right .text-container {
     left: -40px;
+  }
+
+  a .slider-box {
+    width: 225px;
   }
 
   .contact {
