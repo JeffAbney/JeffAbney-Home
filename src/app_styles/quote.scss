@@ -23,10 +23,6 @@
     font-family: "Playfair Display", serif;
   }
 
-  .quote-machine {
-
-  }
-
   a {
     color: #fff;
   }
@@ -37,60 +33,61 @@
   }
 
   .logo-container {
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    left: 10px;
-    top: 20px;
+display: flex;
+width: 100%;
+height: 75px;
+margin: 25px 0 0 25px;
   }
 
   .logo {
-    height: 50%;
+    height: 100%;
     width: auto;
   }
 
-  .grid-container {
-    min-height: 250px;
-    width: 90%;
-    margin-top: 70px;
-    display: grid;
-    grid-template-columns: 0.2fr 1fr auto 1fr 0.2fr;
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    grid-template-areas:
-      "start quote quote quote stop"
-      ". . author twitter ."
-      ". . btn . .";
+  .app-container {
+    display: flex;
+    flex-direction: column;
+  
+    .quote-container {
+      display: flex;
+      justify-content: space-evenly;
+    }
   }
 
+
+
   .text-container {
-    grid-area: quote;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
-    margin: 10px 25px 0 30px;
+    width: 60%;
     text-align: center;
+
+    
   }
 
   .author-container {
-    grid-area: author;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template:
+      ". auth twit" 1fr
+      / 1fr 1fr 1fr;
     color: #fff;
     font-family: "Playfair Display", serif;
     font-size: 1.5em;
     text-align: center;
+
+    .author-text {
+      grid-area: auth;
+    }
   }
 
   .twitter-link-container {
-    grid-area: twitter;
+    grid-area: twit;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     color: #fff;
-    margin-left: 10%;
   }
 
   .fab {
@@ -101,7 +98,6 @@
   .new-quote-btn {
     height: 40px;
     width: 175px;
-    grid-area: btn;
     color: #fff;
     font-family: "Playfair Display", serif;
     font-weight: bold;
@@ -115,22 +111,15 @@
     font-family: "Playfair Display", serif;
     font-weight: normal;
     margin: 0;
-    align-self: center;
   }
 
-  .quote-mark-start {
-    grid-area: start;
-  }
-
-  .quote-mark-stop {
-    grid-area: stop;
-  }
 
   .credit {
     font-weight: normal;
     margin-top: 25px;
     text-align: center;
     font-size: 0.9em;
+    max-width: 300px;
   }
 
   /*Start color change styles*/
@@ -225,6 +214,13 @@
 
     .text-container {
       font-size: 1.5em;
+    }
+  
+    .twitter-link-container {
+      justify-content: flex-start;
+    }
+    .credit {
+      max-width: 600px;
     }
   }
 }

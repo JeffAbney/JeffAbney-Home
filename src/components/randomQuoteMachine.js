@@ -79,13 +79,16 @@ class RandomQuoteMachine extends Component {
 
     return (
       <div className={`page color-${colorCount}`}>
-        <a href="https://jeffabney.com" className="logo-container">
-          <img src={logo} alt="Jeff Abney logo" className="logo" />
-        </a>
+        <div className="logo-container">
+          <a class-name="logo-link" href="https://jeffabney.com">
+            <img src={logo} alt="Jeff Abney logo" className="logo" />
+          </a>
+        </div>
         <div
-          className={"grid-container color-" + this.state.colorCount}
+          className={"app-container color-" + this.state.colorCount}
           id="quote-box"
         >
+        <div className="quote-container">
           <p className="quote-mark quote-mark-start">“</p>
           <div className="text-container">
             {
@@ -100,16 +103,16 @@ class RandomQuoteMachine extends Component {
                   <div></div><div></div><div></div><div></div>
                 </div>
             }
-
-
           </div>
+          
           <p className="quote-mark quote-mark-stop">”</p>
+          </div>
+          
           <div className="author-container">
-            <p className="auto-text" id="author">
+            <p className="author-text" id="author">
               {this.state.author.replace("&#8217;", "'").replace("&#038;", "&")}
             </p>
-          </div>
-          <div className="twitter-link-container">
+            <div className="twitter-link-container">
             <div className="twitter-icon">
               <a
                 className="twitter-share-button"
@@ -121,6 +124,8 @@ class RandomQuoteMachine extends Component {
               </a>
             </div>
           </div>
+          </div>
+          
           <button
             disabled={this.state.btnDisabled}
             className={"new-quote-btn color-" + this.state.colorCount}
