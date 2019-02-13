@@ -88,44 +88,44 @@ class RandomQuoteMachine extends Component {
           className={"app-container color-" + this.state.colorCount}
           id="quote-box"
         >
-        <div className="quote-container">
-          <p className="quote-mark quote-mark-start">“</p>
-          <div className="text-container">
-            {
-              this.state.ready ?
-                <p
-                  className="quote-text"
-                  id="text">{this.state.quote.slice(3, -5).replace("&#8217;", "'")}</p>
-                :
-                <div
-                  className="lds-ellipsis"
-                >
-                  <div></div><div></div><div></div><div></div>
-                </div>
-            }
+          <div className="quote-container">
+            <p className="quote-mark quote-mark-start">“</p>
+            <div className="text-container">
+              {
+                this.state.ready ?
+                  <p
+                    className="quote-text"
+                    id="text">{this.state.quote.slice(3, -5).replace("&#8217;", "'")}</p>
+                  :
+                  <div
+                    className="lds-ellipsis"
+                  >
+                    <div></div><div></div><div></div><div></div>
+                  </div>
+              }
+            </div>
+
+            <p className="quote-mark quote-mark-stop">”</p>
           </div>
-          
-          <p className="quote-mark quote-mark-stop">”</p>
-          </div>
-          
+
           <div className="author-container">
             <p className="author-text" id="author">
               {this.state.author.replace("&#8217;", "'").replace("&#038;", "&")}
             </p>
             <div className="twitter-link-container">
-            <div className="twitter-icon">
-              <a
-                className="twitter-share-button"
-                id="tweet-quote"
-                href={tweetUrl + this.state.quote + " -" + this.state.author}
-                target="_blank"
-              >
-                <i className="fab fa-twitter"></i>
-              </a>
+              <div className="twitter-icon">
+                <a
+                  className="twitter-share-button"
+                  id="tweet-quote"
+                  href={tweetUrl + this.state.quote + " -" + this.state.author}
+                  target="_blank"
+                >
+                  <i className="fab fa-twitter"></i>
+                </a>
+              </div>
             </div>
           </div>
-          </div>
-          
+
           <button
             disabled={this.state.btnDisabled}
             className={"new-quote-btn color-" + this.state.colorCount}
