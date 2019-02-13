@@ -813,7 +813,8 @@ body {
   color: #fff;
   margin: 0;
   overflow-x: hidden;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  border: none; }
 
 .app {
   display: flex;
@@ -1286,7 +1287,8 @@ a .slider-box {
     .about .bio {
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      margin-bottom: 50px; }
       .about .bio img {
         width: 60%;
         height: auto; }
@@ -1320,7 +1322,7 @@ a .slider-box {
     width: 225px; }
   .contact {
     height: 50vh;
-    padding-top: 60px; }
+    padding-top: 80px; }
   .contact .contact-text {
     text-align: center; }
     .contact .contact-text p {

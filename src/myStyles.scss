@@ -8,6 +8,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  border: none;
 }
 
 .app {
@@ -635,6 +636,8 @@ a .slider-box {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
+
 
     img {
       width: 60%;
@@ -699,7 +702,7 @@ a .slider-box {
 
   .contact {
     height: 50vh;
-    padding-top: 60px;
+    padding-top: 80px;
   }
   .contact .contact-text {
     text-align: center;
