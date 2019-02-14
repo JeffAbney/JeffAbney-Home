@@ -1047,7 +1047,9 @@ h2 {
     min-width: 200px;
     margin-top: 30px; }
     .footer .social-container .social-icon {
-      margin: 0 10px 0 10px; }
+      margin: 0 10px 0 10px;
+      height: 39px;
+      width: 39px; }
   .footer .credit {
     margin: 30px 0 30px 0; }
     .footer .credit a {
