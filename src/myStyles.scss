@@ -85,6 +85,16 @@ h2 {
       margin: 15px;
       color: #fff;
       text-decoration: none;
+      padding-bottom: 10px;
+      border-bottom: 3px solid transparent;
+    }
+    a:hover {
+      color: $color-black;
+      border-bottom: 3px solid $color-yellow;
+    }
+
+    a.active {
+      border-bottom: 3px solid $color-black;
     }
   }
 }
@@ -602,13 +612,7 @@ a .slider-box {
       margin: 10px;
       }
 
-      a:hover {
-        color: $color-black;
-      }
-
-      a:active {
-        color: $color-yellow;
-      }
+      
     }
   }
 
