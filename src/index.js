@@ -12,15 +12,20 @@ import './myStyles.scss';
 
 class App extends React.Component {
 
-  state = {
+  constructor(props){
+    super(props);
+
+  this.state = {
     Navbar: null,
     Hero: null,
     Projects: null,
     About: null,
     Contact: null,
-    Footer: null
+    Footer: null,
+    NavLine: "home"
   };
 
+  }
   componentDidMount() {
     import(/* webpackChunkName: 'Navbar' */ './components/nav.js').then(Navbar => {
       this.setState({ Navbar: Navbar.default })
@@ -47,22 +52,27 @@ class App extends React.Component {
   render() {
     const { Navbar, Hero, Projects, About, Contact, Footer } = this.state;
 
-    var scrollEventHandler = function () {
-      if (isScrolledIntoView(document.getElementById('projects'))) {
-        console.log("yup")
+   /* var scrollEventHandler = function () {
+      const home = (document.getElementById('nav-home'));
+      const projects = (document.getElementById('nav-projects'));
+      const about = (document.getElementById('nav-about'));
+      const contact = (document.getElementById('nav-contact'));
+
+      if (isScrolledIntoView(projects) && !projects.classList.contains("active")) {
+        projects.classList.add("active");
       } else {
-        console.log("nope");
+        projects.classList.remove("active");
       }
     }
-
+*/
 
     window.addEventListener('scroll', function (e) {
       scrollEventHandler()
     })
     
-    var isScrolledIntoView = function (el) {
-      var elemTop = el.getBoundingClientRect().top;
-      var elemBottom = el.getBoundingClientRect().bottom;
+    var isScrolledIntoView = function(elem) {
+      var elemTop = elem.getBoundingClientRect().top;
+      var elemBottom = elem.getBoundingClientRect().bottom;
 
       var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
       return isVisible;
@@ -72,7 +82,7 @@ class App extends React.Component {
       <Router>
         <Route exact={true} path="/" render={() => (
           <div className="app">
-            {Navbar ? <Navbar /> : <p>Loading...</p>}
+            {Navbar ? <Navbar underline={this.state.NavLine} /> : <p>Loading...</p>}
             {Hero ? <Hero /> : <p>Loading...</p>}
             {Projects ? <Projects /> : <p>Loading...</p>}
             {About ? <About /> : <p>Loading...</p>}
