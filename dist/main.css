@@ -875,7 +875,13 @@ h2 {
     .nav-bar .menu a {
       margin: 15px;
       color: #fff;
-      text-decoration: none; }
+      text-decoration: none;
+      padding-bottom: 10px;
+      border-bottom: 3px solid transparent; }
+    .nav-bar .menu a:hover {
+      border-bottom: 3px solid #f5cd23; }
+    .nav-bar .menu a.active {
+      border-bottom: 3px solid #030000; }
 
 /* ------------- Hero Section Style -------------------- */
 .hero {
@@ -1263,10 +1269,6 @@ a .slider-box {
       .nav-bar .menu .btn-nav {
         font-size: 14px;
         margin: 10px; }
-      .nav-bar .menu a:hover {
-        color: #030000; }
-      .nav-bar .menu a:active {
-        color: #f5cd23; }
   .hero {
     height: 70vh;
     padding-top: 180px; }
