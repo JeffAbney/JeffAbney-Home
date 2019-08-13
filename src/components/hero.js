@@ -3,9 +3,7 @@ import React from 'react';
 export default () => (
   <div className="hero" id="home">
     <h1>&lt; Web Developer /&gt;</h1>
-    <p>I solve problems and create solutions 
-      that help people and companies reach their goals. I specialize
-      in developing Single Page Apps with HTML5, CSS, and Javascript with React.
+    <p>I build webpages that tell your busniess's story and capture customer's imaginations.
     </p>
     <div className="btn-container">
     <a className="button" href="#contact">

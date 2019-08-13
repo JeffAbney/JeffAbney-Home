@@ -7,10 +7,10 @@ export default () => (
       <div className="centering">
         <div className="text-container about-text-container">
           <h3>I'm Jeff Abney.</h3>
-          <p>Go getting, problem solving, self-taught and always learning. I bring a unique perspective to Web Development</p>
-          <p>My journey into web development has lead me to Javascript with React and Node. My enthusiasm for frontend comes from my desire to reach as many people as possible and make their experiences better.</p>
-          <p>I worked with some great people throughout my previous career as a teacher and learned a lot about the importance of personal connections and good communication.</p>
-          <p>I'm looking for remote work opportunities and freelance work.</p>
+          <p>I worked as a teacher for 7 years, and though it was rewarding, I felt a need to create something more tangible.</p>
+          <p>I started building websites and mobile apps as a creative outlet.</p>
+          <p>My wife, Daniela and I are preparing to build our first home and after doing some reasearch on architecture websites I found that many firms had created beautiful buildings, but their websites lacked the excitement that their projects evoked.</p>
+          <p>Since then I have been on a mission to help businesses tell their stories and show clients what they are made of.</p>
         </div>
       </div>
       <div className="image-container about-image-container">
@@ -19,10 +19,11 @@ export default () => (
     </div>
     <div className="skills">
       <h2>What do I do?</h2>
-      <p>- HTML, CSS, SCSS</p>
-      <p>- Javascript</p>
+      <p>- HTML, CSS, SCSS, JS</p>
       <p>- React</p>
       <p>- Node</p>
+      <p>- React Native</p>
+      <p>- MongoDB & MySQL</p>
       <div className="btn-container">
       <a href="#contact">Need a site?</a>
       <a href="JeffAbneyResume.pdf" target="_blank">
