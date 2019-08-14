@@ -6,24 +6,24 @@ import Pomodoro from '/home/jeff/git_workspace/JeffAbney/src/components/pomoApp.
 import DrumMachine from '/home/jeff/git_workspace/JeffAbney/src/components/drumMachine.js';
 import RandomQuoteMachine from '/home/jeff/git_workspace/JeffAbney/src/components/randomQuoteMachine.js';
 import Calculator from '/home/jeff/git_workspace/JeffAbney/src/components/calculator.js';
+import DidditPrivacyPolicy from '/home/jeff/git_workspace/JeffAbney/src/components/didditPrivacyPolicy.js';
 import './myStyles.scss';
-
 
 
 class App extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
 
-  this.state = {
-    Navbar: null,
-    Hero: null,
-    Projects: null,
-    About: null,
-    Contact: null,
-    Footer: null,
-    NavLine: "home"
-  };
+    this.state = {
+      Navbar: null,
+      Hero: null,
+      Projects: null,
+      About: null,
+      Contact: null,
+      Footer: null,
+      NavLine: "home"
+    };
 
   }
   componentDidMount() {
@@ -52,32 +52,32 @@ class App extends React.Component {
   render() {
     const { Navbar, Hero, Projects, About, Contact, Footer } = this.state;
 
-   /* var scrollEventHandler = function () {
-      const home = (document.getElementById('nav-home'));
-      const projects = (document.getElementById('nav-projects'));
-      const about = (document.getElementById('nav-about'));
-      const contact = (document.getElementById('nav-contact'));
-
-      if (isScrolledIntoView(projects) && !projects.classList.contains("active")) {
-        projects.classList.add("active");
-      } else {
-        projects.classList.remove("active");
-      }
-    }
-*/
+    /* var scrollEventHandler = function () {
+       const home = (document.getElementById('nav-home'));
+       const projects = (document.getElementById('nav-projects'));
+       const about = (document.getElementById('nav-about'));
+       const contact = (document.getElementById('nav-contact'));
+ 
+       if (isScrolledIntoView(projects) && !projects.classList.contains("active")) {
+         projects.classList.add("active");
+       } else {
+         projects.classList.remove("active");
+       }
+     }
+ */
 
     window.addEventListener('scroll', function (e) {
       scrollEventHandler()
     })
-    
-    var isScrolledIntoView = function(elem) {
+
+    var isScrolledIntoView = function (elem) {
       var elemTop = elem.getBoundingClientRect().top;
       var elemBottom = elem.getBoundingClientRect().bottom;
 
       var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
       return isVisible;
     }
-    
+
     return (
       <Router>
         <Route exact={true} path="/" render={() => (
@@ -112,6 +112,12 @@ class App extends React.Component {
         <Route exact={true} path='/calculator' render={() => (
           <div className="app calculator-app">
             <Calculator />
+          </div>
+        )} />
+
+        <Route exact={true} path='/didditPrivacyPolicy' render={() => (
+          <div className="app">
+            <DidditPrivacyPolicy />
           </div>
         )} />
       </Router>
