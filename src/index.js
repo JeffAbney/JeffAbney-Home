@@ -66,17 +66,17 @@ class App extends React.Component {
      }
  */
 
-    window.addEventListener('scroll', function (e) {
-      scrollEventHandler()
-    })
+    // window.addEventListener('scroll', function (e) {
+    //   scrollEventHandler()
+    // })
 
-    var isScrolledIntoView = function (elem) {
-      var elemTop = elem.getBoundingClientRect().top;
-      var elemBottom = elem.getBoundingClientRect().bottom;
+    // var isScrolledIntoView = function (elem) {
+    //   var elemTop = elem.getBoundingClientRect().top;
+    //   var elemBottom = elem.getBoundingClientRect().bottom;
 
-      var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-      return isVisible;
-    }
+    //   var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+    //   return isVisible;
+    // }
 
     return (
       <Router>
