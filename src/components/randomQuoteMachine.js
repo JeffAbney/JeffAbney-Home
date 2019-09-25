@@ -34,7 +34,6 @@ class RandomQuoteMachine extends Component {
     let regEx = /\&/gi;
     const response = await fetch(APIURL)
     const data = await response.json();
-    console.log("data is here", data);
     this.setState({
         quoteCount: 0,
         cache: data,
