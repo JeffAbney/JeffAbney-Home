@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import '/home/jeff/git_workspace/JeffAbney/src/app_styles/quote.scss';
 import logo from '/home/jeff/git_workspace/JeffAbney/src/static/images/JEFF_ICON.png'
 
-const APIURL = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=40';
+const APIURL = 'https://abney-quote-machine.herokuapp.com';
 const tweetUrl = "https://twitter.com/intent/tweet?text=";
 let randomNumber = () => Math.floor((Math.random() * 4)) + 1;
 //End importing *********************************************
@@ -30,19 +30,19 @@ class RandomQuoteMachine extends Component {
     this.reset = this.reset.bind(this);
   }
 
-  APIFetch() {
+  async APIFetch() {
     let regEx = /\&/gi;
-    fetch(APIURL)
-      .then(response => response.json())
-      .then(data => this.setState({
-
+    const response = await fetch(APIURL)
+    const data = await response.json();
+    console.log("data is here", data);
+    this.setState({
         quoteCount: 0,
-        cache: data.filter((post) => !regEx.test(post.content)),
-        quote: data[0].content,
-        author: data[0].title,
+        cache: data,
+        quote: data[0].content.rendered,
+        author: data[0].title.rendered,
         btnDisabled: false,
         ready: true
-      }))
+      })
   }
 
   reset() {
@@ -59,10 +59,9 @@ class RandomQuoteMachine extends Component {
       this.setState({
         colorCount: Math.floor((Math.random() * 4) + 1),
         quoteCount: this.state.quoteCount + 1,
-        quote: this.state.cache[this.state.quoteCount + 1].content,
-        author: this.state.cache[this.state.quoteCount + 1].title
+        quote: this.state.cache[this.state.quoteCount + 1].content.rendered,
+        author: this.state.cache[this.state.quoteCount + 1].title.rendered
       });
-    console.log(this.state.cache)
   }
 
 
