@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import '/home/jeff/git_workspace/JeffAbney/src/app_styles/quote.scss';
 import logo from '/home/jeff/git_workspace/JeffAbney/src/static/images/JEFF_ICON.png'
 
-const APIURL = 'https://abney-quote-machine.herokuapp.com';
+const APIURL = 'https://rqm-api.herokuapp.com';
 const tweetUrl = "https://twitter.com/intent/tweet?text=";
 let randomNumber = () => Math.floor((Math.random() * 4)) + 1;
 //End importing *********************************************
@@ -31,14 +31,13 @@ class RandomQuoteMachine extends Component {
   }
 
   async APIFetch() {
-    let regEx = /\&/gi;
     const response = await fetch(APIURL)
     const data = await response.json();
     this.setState({
         quoteCount: 0,
         cache: data,
-        quote: data[0].content.rendered,
-        author: data[0].title.rendered,
+        quote: data[0].content,
+        author: data[0].author,
         btnDisabled: false,
         ready: true
       })
@@ -58,8 +57,8 @@ class RandomQuoteMachine extends Component {
       this.setState({
         colorCount: Math.floor((Math.random() * 4) + 1),
         quoteCount: this.state.quoteCount + 1,
-        quote: this.state.cache[this.state.quoteCount + 1].content.rendered,
-        author: this.state.cache[this.state.quoteCount + 1].title.rendered
+        quote: this.state.cache[this.state.quoteCount + 1].content,
+        author: this.state.cache[this.state.quoteCount + 1].author
       });
   }
 
@@ -93,7 +92,7 @@ class RandomQuoteMachine extends Component {
                 this.state.ready ?
                   <p
                     className="quote-text"
-                    id="text">{this.state.quote.slice(3, -5).replace("&#8217;", "'")}</p>
+                    id="text">{this.state.quote}</p>
                   :
                   <div
                     className="lds-ellipsis"
@@ -108,7 +107,7 @@ class RandomQuoteMachine extends Component {
 
           <div className="author-container">
             <p className="author-text" id="author">
-              {this.state.author.replace("&#8217;", "'").replace("&#038;", "&")}
+              {this.state.author}
             </p>
             <div className="twitter-link-container">
               <div className="twitter-icon">
