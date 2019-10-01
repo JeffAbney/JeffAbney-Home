@@ -125,12 +125,12 @@ function RandomQuoteMachine(props) {
               >
                 <i className="fab fa-twitter"></i>
               </a>
-              <p>
+              <p className="share-text">
                 {function () {
                   if (shareDataReady && shareData[quoteData[quoteNumber].id] !== undefined) {
                     return shareData[quoteData[quoteNumber].id].twitter
                   } else {
-                    return "No shares yet"
+                    return "0"
                   }
                 }()}
               </p>
