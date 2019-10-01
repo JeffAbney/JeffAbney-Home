@@ -25,7 +25,7 @@ const proArr = [
   {
     id: 3,
     title: 'Random Quote Machine',
-    text: 'React - API Connected - CSS',
+    text: 'React with Hooks - Node.js - MySQL',
     image: randomQuoteImg,
     link: '/randomQuote'
   },
